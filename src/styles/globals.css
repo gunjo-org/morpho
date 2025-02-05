@@ -5,9 +5,9 @@
 @layer base {
     :root {
         /* Brand */
-        --color-primary: 169, 74, 255;
-        --color-primary-light: 191, 119, 255;
-        --color-primary-dark: 151, 33, 255;
+        --color-primary: 64, 64, 64;
+        --color-primary-light: 64, 64, 64;
+        --color-primary-dark: 64, 64, 64;
 
         /* Background */
         --color-background-base: 255, 255, 255; /* bg-white */
@@ -48,9 +48,9 @@
 
     [data-theme="dim"] {
         /* Brand */
-        --color-primary: 169, 74, 255;
-        --color-primary-light: 191, 119, 255;
-        --color-primary-dark: 151, 33, 255;
+        --color-primary: 229, 229, 229;
+        --color-primary-light: 229, 229, 229;
+        --color-primary-dark: 229, 229, 229;
 
         /* Background */
         --color-background-base: 38, 38, 38; /* bg-neutral-800 */
@@ -91,9 +91,9 @@
 
     [data-theme="dark"] {
         /* Brand */
-        --color-primary: 169, 74, 255;
-        --color-primary-light: 191, 119, 255;
-        --color-primary-dark: 151, 33, 255;
+        --color-primary: 229, 229, 229;
+        --color-primary-light: 229, 229, 229;
+        --color-primary-dark: 229, 229, 229;
 
         /* Background */
         --color-background-base: 0, 0, 0; /* bg-black */
