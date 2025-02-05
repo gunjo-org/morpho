@@ -35,7 +35,6 @@ export default function TopBar(props: Props) {
             alt="gunjo logo"
             width={30}
             height={30}
-            className="block transition-transform duration-700 ease-in-out group-hover:rotate-180"
           />
         </div>{" "}
       </Button>

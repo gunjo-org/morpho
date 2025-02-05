@@ -12,7 +12,6 @@ export default function Page() {
             alt="gunjo logo"
             width={40}
             height={40}
-            className="block transition-transform duration-700 ease-in-out hover:rotate-180"
           />
         </div>{" "}
         <Link

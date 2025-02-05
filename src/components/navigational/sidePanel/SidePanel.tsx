@@ -18,7 +18,6 @@ export default function SidePanel() {
             width={44}
             height={44}
             priority
-            className="block transition-transform ease-in-out duration-700 group-hover:rotate-180"
           />
         </div>
       </Button>
