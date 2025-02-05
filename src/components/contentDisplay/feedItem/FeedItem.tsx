@@ -3,7 +3,7 @@
 import { GeneratorView } from "@atproto/api/dist/client/types/app/bsky/feed/defs";
 import Image from "next/image";
 import FallbackFeed from "@/assets/images/fallbackFeed.png";
-import { BiPlus, BiSolidHeart, BiSolidTrash } from "react-icons/bi";
+import { BiPlus, BiSolidStar, BiSolidTrash } from "react-icons/bi";
 import Button from "@/components/actions/button/Button";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -86,7 +86,7 @@ export default function FeedItem(props: Props) {
       </div>
       <p className="text-skin-base break-words">{description}</p>
       <small className="text-skin-secondary flex items-center gap-1 font-medium">
-        <BiSolidHeart className="text-skin-icon-base" />
+        <BiSolidStar className="text-skin-icon-base" />
         <span>{likeCount ?? 0}</span>
       </small>
     </Link>

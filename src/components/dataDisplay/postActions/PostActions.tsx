@@ -15,13 +15,13 @@ import { useComposerControls } from "@/app/providers/composer";
 import toast from "react-hot-toast";
 import {
   BiDotsHorizontalRounded,
-  BiHeart,
+  BiStar,
   BiMessageRounded,
   BiRepost,
   BiSolidBell,
   BiSolidBellOff,
   BiSolidCopy,
-  BiSolidHeart,
+  BiSolidStar,
   BiSolidQuoteAltRight,
   BiSolidTrash,
 } from "react-icons/bi";
@@ -190,9 +190,9 @@ export default function PostActions(props: Props) {
             }
           >
             {liked ? (
-              <BiSolidHeart className="text-xl" />
+              <BiSolidStar className="text-xl" />
             ) : (
-              <BiHeart className="text-xl" />
+              <BiStar className="text-xl" />
             )}
           </Button>
           <Dropdown>
@@ -338,9 +338,9 @@ export default function PostActions(props: Props) {
           `}
       >
         {liked ? (
-          <BiSolidHeart className="text-lg" />
+          <BiSolidStar className="text-lg" />
         ) : (
-          <BiHeart className="text-lg" />
+          <BiStar className="text-lg" />
         )}
         {likeCount > 0 && abbreviateNumber(likeCount)}
       </Button>
