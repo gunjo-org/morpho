@@ -25,7 +25,7 @@
         --color-text-tertiary: 163, 163, 163; /* text-neutral-400 */
         --color-text-base-inverted: 255, 255, 255; /* text-white */
         --color-text-link-base: 65, 102, 245; /* primary */
-        --color-text-link-base-hover: 151, 33, 255; /* primary-dark */
+        --color-text-link-base-hover: 35, 71, 213; /* primary-dark */
 
         /* Border and outline */
         --color-border-base: 229, 229, 229; /* border-neutral-200 */
@@ -67,7 +67,7 @@
         --color-text-secondary: 212, 212, 212; /* text-neutral-300 */
         --color-text-tertiary: 163, 163, 163; /* text-neutral-400 */
         --color-text-base-inverted: 64, 64, 64; /* text-neutral-700 */
-        --color-text-link-base: 191, 119, 255; /* primary-light */
+        --color-text-link-base: 150, 168, 238; /* primary-light */
         --color-text-link-base-hover: 65, 102, 245; /* primary */
 
         /* Border and outline */
@@ -110,7 +110,7 @@
         --color-text-secondary: 212, 212, 212; /* text-neutral-300 */
         --color-text-tertiary: 163, 163, 163; /* text-neutral-400 */
         --color-text-base-inverted: 64, 64, 64; /* text-neutral-700 */
-        --color-text-link-base: 191, 119, 255; /* primary-light */
+        --color-text-link-base: 150, 168, 238; /* primary-light */
         --color-text-link-base-hover: 65, 102, 245; /* primary */
 
         /* Border and outline */
