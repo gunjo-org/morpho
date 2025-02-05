@@ -5,9 +5,9 @@
 @layer base {
     :root {
         /* Brand */
-        --color-primary: 64, 64, 64;
-        --color-primary-light: 64, 64, 64;
-        --color-primary-dark: 64, 64, 64;
+        --color-primary: 65, 102, 245;
+        --color-primary-light: 150, 168, 238;
+        --color-primary-dark: 35, 71, 213;
 
         /* Background */
         --color-background-base: 255, 255, 255; /* bg-white */
@@ -24,7 +24,7 @@
         --color-text-secondary: 115, 115, 115; /* text-neutral-500 */
         --color-text-tertiary: 163, 163, 163; /* text-neutral-400 */
         --color-text-base-inverted: 255, 255, 255; /* text-white */
-        --color-text-link-base: 169, 74, 255; /* primary */
+        --color-text-link-base: 65, 102, 245; /* primary */
         --color-text-link-base-hover: 151, 33, 255; /* primary-dark */
 
         /* Border and outline */
@@ -48,9 +48,9 @@
 
     [data-theme="dim"] {
         /* Brand */
-        --color-primary: 229, 229, 229;
-        --color-primary-light: 229, 229, 229;
-        --color-primary-dark: 229, 229, 229;
+        --color-primary: 65, 102, 245;
+        --color-primary-light: 150, 168, 238;
+        --color-primary-dark: 35, 71, 213;
 
         /* Background */
         --color-background-base: 38, 38, 38; /* bg-neutral-800 */
@@ -68,7 +68,7 @@
         --color-text-tertiary: 163, 163, 163; /* text-neutral-400 */
         --color-text-base-inverted: 64, 64, 64; /* text-neutral-700 */
         --color-text-link-base: 191, 119, 255; /* primary-light */
-        --color-text-link-base-hover: 169, 74, 255; /* primary */
+        --color-text-link-base-hover: 65, 102, 245; /* primary */
 
         /* Border and outline */
         --color-border-base: 64, 64, 64; /* border-neutral-700 */
@@ -91,9 +91,9 @@
 
     [data-theme="dark"] {
         /* Brand */
-        --color-primary: 229, 229, 229;
-        --color-primary-light: 229, 229, 229;
-        --color-primary-dark: 229, 229, 229;
+        --color-primary: 65, 102, 245;
+        --color-primary-light: 150, 168, 238;
+        --color-primary-dark: 35, 71, 213;
 
         /* Background */
         --color-background-base: 0, 0, 0; /* bg-black */
@@ -111,7 +111,7 @@
         --color-text-tertiary: 163, 163, 163; /* text-neutral-400 */
         --color-text-base-inverted: 64, 64, 64; /* text-neutral-700 */
         --color-text-link-base: 191, 119, 255; /* primary-light */
-        --color-text-link-base-hover: 169, 74, 255; /* primary */
+        --color-text-link-base-hover: 65, 102, 245; /* primary */
 
         /* Border and outline */
         --color-border-base: 64, 64, 64; /* border-neutral-700 */
