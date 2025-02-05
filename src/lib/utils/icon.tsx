@@ -5,7 +5,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 import {
   BiRepost,
   BiSolidErrorAlt,
-  BiSolidHeart,
+  BiSolidStar,
   BiSolidUserPlus,
 } from "react-icons/bi";
 import { IoCloudOffline } from "react-icons/io5";
