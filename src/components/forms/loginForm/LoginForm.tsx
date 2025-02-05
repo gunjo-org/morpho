@@ -61,7 +61,7 @@ export default function LoginForm() {
         <Image
           src="/mark.svg"
           alt="gunjo logo"
-          width={150}
+          width={50}
           height={50}
           priority
           className="mx-auto mb-3"
@@ -83,7 +83,7 @@ export default function LoginForm() {
       <Image
         src="/mark.svg"
         alt="gunjo logo"
-        width={150}
+        width={50}
         height={50}
         className="mx-auto mb-3"
       />
