@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Login",
-  description: "Your Bluesky web client",
+  title: "Log in",
+  description: "Bluesky client for the web",
 };
 
 export default async function InventoryLayout({

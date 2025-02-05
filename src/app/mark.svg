@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 600 600">
+  <g transform="rotate(30, 300, 300)" >
+    <rect id="a" x="300" y="0" width="156" height="156"
+          transform="rotate(45, 300, 0)" />
+    <use xlink:href="#a" transform="rotate(60, 300, 300)" />
+    <use xlink:href="#a" transform="rotate(120, 300, 300)" />
+    <use xlink:href="#a" transform="rotate(180, 300, 300)" />
+    <use xlink:href="#a" transform="rotate(240, 300, 300)" />
+    <use xlink:href="#a" transform="rotate(300, 300, 300)" />
+  </g>
+</svg>

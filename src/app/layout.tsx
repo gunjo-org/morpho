@@ -14,7 +14,7 @@ import ThemeProvider from "./providers/theme";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: { template: "%s — Gunjo", default: "Gunjo" },
+  title: { template: "%s - Gunjo", default: "Gunjo" },
   description: "Bluesky client for the web",
   metadataBase: new URL("https://gunjo.org"),
   other: {

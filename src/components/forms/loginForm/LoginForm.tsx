@@ -59,8 +59,8 @@ export default function LoginForm() {
     return (
       <section className="bg-skin-base border border-skin-base shadow-2xl shadow-primary-light/30 max-w-xs rounded-2xl p-5">
         <Image
-          src="/logo.svg"
-          alt="Ouranos logo"
+          src="/mark.svg"
+          alt="gunjo logo"
           width={150}
           height={50}
           priority
@@ -81,8 +81,8 @@ export default function LoginForm() {
   return (
     <section className="bg-skin-base border border-skin-base max-w-xs rounded-2xl p-5 shadow-2xl shadow-primary-light/30">
       <Image
-        src="/logo.svg"
-        alt="Ouranos logo"
+        src="/mark.svg"
+        alt="gunjo logo"
         width={150}
         height={50}
         className="mx-auto mb-3"
