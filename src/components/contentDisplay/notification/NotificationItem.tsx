@@ -94,7 +94,7 @@ const NotificationItem = memo(function NotificationItem(props: Props) {
                   {getNotificationLabel(reason)}
                 </span>
                 <span className="text-skin-tertiary whitespace-nowrap font-medium">
-                  &nbsp;· {getRelativeTime(indexedAt)}
+                  &nbsp;&bull; {getRelativeTime(indexedAt)}
                 </span>
                 {subjectUri && (
                   <div className="mt-2">
