@@ -5,7 +5,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 import {
   BiRepost,
   BiSolidErrorAlt,
-  BiSolidHeart,
+  BiSolidStar,
   BiSolidUserPlus,
 } from "react-icons/bi";
 import { IoCloudOffline } from "react-icons/io5";
@@ -58,7 +58,7 @@ export function getFeedAlertIcon(variant: FeedAlert) {
 export const getNotificationIcon = (reason: string) => {
   switch (reason) {
     case "like":
-      return <BiSolidHeart className="text-skin-icon-like shrink-0 text-2xl" />;
+      return <BiSolidStar className="text-skin-icon-like shrink-0 text-2xl" />;
     case "repost":
       return <BiRepost className="text-skin-icon-repost shrink-0 text-2xl" />;
     case "follow":

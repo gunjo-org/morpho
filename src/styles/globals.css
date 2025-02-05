@@ -5,9 +5,9 @@
 @layer base {
     :root {
         /* Brand */
-        --color-primary: 169, 74, 255;
-        --color-primary-light: 191, 119, 255;
-        --color-primary-dark: 151, 33, 255;
+        --color-primary: 65, 102, 245;
+        --color-primary-light: 150, 168, 238;
+        --color-primary-dark: 35, 71, 213;
 
         /* Background */
         --color-background-base: 255, 255, 255; /* bg-white */
@@ -24,8 +24,8 @@
         --color-text-secondary: 115, 115, 115; /* text-neutral-500 */
         --color-text-tertiary: 163, 163, 163; /* text-neutral-400 */
         --color-text-base-inverted: 255, 255, 255; /* text-white */
-        --color-text-link-base: 169, 74, 255; /* primary */
-        --color-text-link-base-hover: 151, 33, 255; /* primary-dark */
+        --color-text-link-base: 65, 102, 245; /* primary */
+        --color-text-link-base-hover: 35, 71, 213; /* primary-dark */
 
         /* Border and outline */
         --color-border-base: 229, 229, 229; /* border-neutral-200 */
@@ -36,7 +36,7 @@
         --color-icon-base: 64, 64, 64; /* text-neutral-700 */
         --color-icon-muted: 115, 115, 115; /* text-neutral-500 */
         --color-icon-inverted: 255, 255, 255; /* bg-white */
-        --color-icon-like: 220, 38, 38; /* text-red-600 */
+        --color-icon-like: 214, 158, 46; /* text-yellow-600 */
         --color-icon-repost: 22, 163, 74; /* text-green-600 */
 
         /* Status */
@@ -48,9 +48,9 @@
 
     [data-theme="dim"] {
         /* Brand */
-        --color-primary: 169, 74, 255;
-        --color-primary-light: 191, 119, 255;
-        --color-primary-dark: 151, 33, 255;
+        --color-primary: 65, 102, 245;
+        --color-primary-light: 150, 168, 238;
+        --color-primary-dark: 35, 71, 213;
 
         /* Background */
         --color-background-base: 38, 38, 38; /* bg-neutral-800 */
@@ -67,8 +67,8 @@
         --color-text-secondary: 212, 212, 212; /* text-neutral-300 */
         --color-text-tertiary: 163, 163, 163; /* text-neutral-400 */
         --color-text-base-inverted: 64, 64, 64; /* text-neutral-700 */
-        --color-text-link-base: 191, 119, 255; /* primary-light */
-        --color-text-link-base-hover: 169, 74, 255; /* primary */
+        --color-text-link-base: 150, 168, 238; /* primary-light */
+        --color-text-link-base-hover: 65, 102, 245; /* primary */
 
         /* Border and outline */
         --color-border-base: 64, 64, 64; /* border-neutral-700 */
@@ -79,7 +79,7 @@
         --color-icon-base: 168, 162, 158; /* text-neutral-400 */
         --color-icon-muted: 115, 115, 115; /* text-neutral-500 */
         --color-icon-inverted: 255, 255, 255; /* bg-white */
-        --color-icon-like: 239, 68, 68; /* text-red-500 */
+        --color-icon-like: 236, 201, 75; /* text-yellow-500 */
         --color-icon-repost: 74, 222, 128; /* text-green-400 */
 
         /* Status */
@@ -91,9 +91,9 @@
 
     [data-theme="dark"] {
         /* Brand */
-        --color-primary: 169, 74, 255;
-        --color-primary-light: 191, 119, 255;
-        --color-primary-dark: 151, 33, 255;
+        --color-primary: 65, 102, 245;
+        --color-primary-light: 150, 168, 238;
+        --color-primary-dark: 35, 71, 213;
 
         /* Background */
         --color-background-base: 0, 0, 0; /* bg-black */
@@ -110,8 +110,8 @@
         --color-text-secondary: 212, 212, 212; /* text-neutral-300 */
         --color-text-tertiary: 163, 163, 163; /* text-neutral-400 */
         --color-text-base-inverted: 64, 64, 64; /* text-neutral-700 */
-        --color-text-link-base: 191, 119, 255; /* primary-light */
-        --color-text-link-base-hover: 169, 74, 255; /* primary */
+        --color-text-link-base: 150, 168, 238; /* primary-light */
+        --color-text-link-base-hover: 65, 102, 245; /* primary */
 
         /* Border and outline */
         --color-border-base: 64, 64, 64; /* border-neutral-700 */
@@ -122,7 +122,7 @@
         --color-icon-base: 168, 162, 158; /* text-neutral-400 */
         --color-icon-muted: 115, 115, 115; /* text-neutral-500 */
         --color-icon-inverted: 255, 255, 255; /* bg-white */
-        --color-icon-like: 239, 68, 68; /* text-red-500 */
+        --color-icon-like: 236, 201, 75; /* text-yellow-500 */
         --color-icon-repost: 74, 222, 128; /* text-green-400 */
 
         /* Status */

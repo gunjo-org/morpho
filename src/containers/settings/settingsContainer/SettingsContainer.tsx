@@ -155,7 +155,7 @@ export default async function SettingsContainer() {
         </h3>
         <div className="flex flex-col">
           <Link
-            href="https://github.com/pdelfan/ouranos"
+            href="https://github.com/gunjo-org/morpho"
             target="_blank"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
@@ -163,7 +163,7 @@ export default async function SettingsContainer() {
             GitHub Repository
           </Link>
           <Link
-            href="https://github.com/pdelfan/ouranos/blob/main/LICENSE"
+            href="https://github.com/gunjo-org/morpho/blob/main/LICENSE"
             target="_blank"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >

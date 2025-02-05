@@ -13,20 +13,11 @@ export default function SidePanel() {
       >
         <div className="flex items-center gap-3 group">
           <Image
-            src="/ouranos.svg"
-            alt="Ouranos logo"
+            src="/mark.svg"
+            alt="gunjo logo"
             width={44}
             height={44}
             priority
-            className="block transition-transform ease-in-out duration-700 group-hover:rotate-180"
-          />
-          <Image
-            src="/ouranosText.svg"
-            alt="Ouranos text"
-            width={84}
-            height={26}
-            priority
-            className="hidden lg:block"
           />
         </div>
       </Button>
