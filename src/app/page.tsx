@@ -22,7 +22,7 @@ export default function Home() {
       </header>
       <section className="animate-fade-up animate-delay-150 mx-auto mt-16 max-w-xl">
         <h1 className="text-skin-base max-w-lg text-4xl font-medium">
-          Bluesky client for the web what forked from Ouranos.
+          Bluesky client for the web what forked from Ouranos
         </h1>
         
         <ul className="text-skin-secondary mt-5 text-lg font-medium">
