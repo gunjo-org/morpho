@@ -175,7 +175,7 @@ export const getUserStars = async (
 
 export const starPost = async (agent: Agent, uri: string, cid: string) => {
   try {
-    const star = await agent.star(uri, cid);
+    const star = await agent.like(uri, cid);
     return star;
   } catch (e) {
     throw new Error("Could not star post");
@@ -184,7 +184,7 @@ export const starPost = async (agent: Agent, uri: string, cid: string) => {
 
 export const unstarPost = async (agent: Agent, starUri: string) => {
   try {
-    const unstar = await agent.deleteStar(starUri);
+    const unstar = await agent.deleteLike(starUri);
     return unstar;
   } catch (e) {
     throw new Error("Could not unstar post");
@@ -245,7 +245,7 @@ export const getPostStars = async (
   cursor: string,
 ) => {
   try {
-    const stars = await agent.getStars({ uri: uri, cursor: cursor, limit: 50 });
+    const stars = await agent.getLikes({ uri: uri, cursor: cursor, limit: 50 });
     return stars.data;
   } catch (e) {
     throw new Error("Could not fetch post stars");
