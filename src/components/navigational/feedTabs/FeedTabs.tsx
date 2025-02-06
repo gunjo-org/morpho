@@ -48,9 +48,9 @@ export default function FeedTabs() {
           <Tabs>
             <TabItem
               key={"Following"}
-              isActive={pathname === "/dashboard/home"}
+              isActive={pathname === "/home"}
               label={"Following"}
-              path={"/dashboard/home"}
+              path={"/home"}
             />
             {savedFeeds &&
               savedFeeds
@@ -62,7 +62,7 @@ export default function FeedTabs() {
                       isActive={feed.uri === uri}
                       label={feed.displayName}
                       path={{
-                        pathname: `/dashboard/home/${encodeURIComponent(
+                        pathname: `/home/${encodeURIComponent(
                           feed.uri.split(":")[3].split("/")[0],
                         )}`,
                         query: { uri: feed.uri },
