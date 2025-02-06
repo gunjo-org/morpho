@@ -33,7 +33,7 @@ export default function useStar(props: Props) {
       } else {
         try {
           setStarred(false);
-          await unstarPost(agent, starUri);
+          await unstarPost(agent, likeUri);
           setStarUri(undefined);
         } catch (err) {
           setStarred(true);
