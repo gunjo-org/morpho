@@ -7,7 +7,7 @@ export const NOTIFICATION_FILTER: {
   value: NotificationReason | "all";
 }[] = [
   { label: "All", value: "all" },
-  { label: "Star", value: "like" },
+  { label: "Star", value: "star" },
   { label: "Follow", value: "follow" },
   { label: "Repost", value: "repost" },
   { label: "Quote", value: "quote" },
