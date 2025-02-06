@@ -28,13 +28,11 @@ export default function ProfileTabs() {
           path={`${basePath}/media`}
           isActive={pathname === `${basePath}/media`}
         />
-        {session?.user?.handle === pathname.split("/")[3] && (
-          <TabItem
-            label="Stars"
-            path={`${basePath}/stars`}
-            isActive={pathname === `${basePath}/stars`}
-          />
-        )}
+        <TabItem
+          label="Stars"
+          path={`${basePath}/stars`}
+          isActive={pathname === `${basePath}/stars`}
+        />
         <TabItem
           label="Lists"
           path={`${basePath}/lists`}
