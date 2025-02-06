@@ -24,7 +24,7 @@ export default function useGetLinkMeta(url: string) {
         title: body.title,
         description: body.description,
         image: body.image,
-        likelyType: body.likelyType,
+        starlyType: body.starlyType,
       };
 
       return linkMeta;

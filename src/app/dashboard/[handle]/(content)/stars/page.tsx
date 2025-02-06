@@ -16,5 +16,5 @@ export default async function Page(props: Props) {
     redirect(`/dashboard/user/${handle}`);
   }
 
-  return <UserPostsConatiner mode="likes" handle={handle} />;
+  return <UserPostsConatiner mode="stars" handle={handle} />;
 }

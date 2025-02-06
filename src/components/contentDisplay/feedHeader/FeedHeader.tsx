@@ -6,8 +6,8 @@ import FallbackFeed from "@/assets/images/fallbackFeed.png";
 import Button from "@/components/actions/button/Button";
 import { useLayoutEffect, useState } from "react";
 import {
-  likeFeed,
-  unlikeFeed,
+  starFeed,
+  unstarFeed,
   togglePinFeed,
   toggleSaveFeed,
 } from "@/lib/api/bsky/feed";
@@ -32,9 +32,9 @@ export default function FeedHeader(props: Props) {
   const router = useRouter();
   const [isSaved, setIsSaved] = useState<boolean | null>(null);
   const [isPinned, setIsPinned] = useState<boolean | null>(null);
-  const [isLiked, setIsLiked] = useState<boolean | null>(null);
-  const [likeUri, setLikeUri] = useState<string | undefined>(undefined);
-  const [likeCount, setLikeCount] = useState<number>(0);
+  const [isStarred, setIsStarred] = useState<boolean | null>(null);
+  const [starUri, setStarUri] = useState<string | undefined>(undefined);
+  const [starCount, setStarCount] = useState<number>(0);
   const queryClient = useQueryClient();
   const {
     feedInfo,
@@ -48,8 +48,8 @@ export default function FeedHeader(props: Props) {
     if (feedInfo) {
       setIsSaved(feedInfo.isSaved);
       setIsPinned(feedInfo.isPinned);
-      setIsLiked(feedInfo.isLiked);
-      setLikeUri(feedInfo.view.viewer?.like);
+      setIsStarred(feedInfo.isStarred);
+      setStarUri(feedInfo.view.viewer?.star);
     }
   }, [feedInfo]);
 
@@ -83,25 +83,25 @@ export default function FeedHeader(props: Props) {
     }
   };
 
-  const toggleLike = async () => {
-    setIsLiked((prev) => !prev);
-    if (!likeUri && feedInfo) {
+  const toggleStar = async () => {
+    setIsStarred((prev) => !prev);
+    if (!starUri && feedInfo) {
       try {
-        const like = await likeFeed(
+        const star = await starFeed(
           agent,
           feedInfo?.view.uri,
           feedInfo?.view.cid,
         );
-        setLikeUri(like?.uri);
+        setStarUri(star?.uri);
       } catch (err) {
-        setIsLiked(false);
+        setIsStarred(false);
       }
-    } else if (likeUri && feedInfo) {
+    } else if (starUri && feedInfo) {
       try {
-        await unlikeFeed(agent, likeUri);
-        setLikeUri(undefined);
+        await unstarFeed(agent, starUri);
+        setStarUri(undefined);
       } catch (err) {
-        setIsLiked(true);
+        setIsStarred(true);
       }
     }
   };
@@ -149,11 +149,11 @@ export default function FeedHeader(props: Props) {
                 }`}
               />
             </Button>
-            <Button onClick={toggleLike}>
-              {likeUri && (
-                <BiSolidStar className="text-skin-icon-like text-lg" />
+            <Button onClick={toggleStar}>
+              {starUri && (
+                <BiSolidStar className="text-skin-icon-star text-lg" />
               )}
-              {!likeUri && <BiStar className="text-skin-icon-muted text-lg" />}
+              {!starUri && <BiStar className="text-skin-icon-muted text-lg" />}
             </Button>
           </div>
         )}
@@ -165,7 +165,7 @@ export default function FeedHeader(props: Props) {
       )}
       <small className="text-skin-secondary flex items-center gap-1 font-medium">
         <BiSolidStar className="text-skin-icon-base" />
-        <span>{feedInfo.view.likeCount}</span>
+        <span>{feedInfo.view.starCount}</span>
       </small>
     </article>
   );

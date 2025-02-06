@@ -1,6 +1,6 @@
 import Layout from "@/containers/Layout";
 
-export default function LikedByLayout({
+export default function StarredByLayout({
   children,
 }: {
   children: React.ReactNode;

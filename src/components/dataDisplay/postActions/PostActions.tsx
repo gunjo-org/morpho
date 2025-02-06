@@ -1,6 +1,6 @@
 import Button from "@/components/actions/button/Button";
 import Dropdown from "@/components/actions/dropdown/Dropdown";
-import useLike from "@/lib/hooks/bsky/feed/useLike";
+import useStar from "@/lib/hooks/bsky/feed/useStar";
 import useRepost from "@/lib/hooks/bsky/feed/useRepost";
 import { useClipboard } from "use-clipboard-copy";
 import { AppBskyFeedPost, type AppBskyFeedDefs } from "@atproto/api";
@@ -38,7 +38,7 @@ export default function PostActions(props: Props) {
   const text = AppBskyFeedPost.isRecord(post.record) && post.record.text;
   const { data: session } = useSession();
   const { deletePost } = useDeletePost({ post: post });
-  const { liked, toggleLike, likeCount } = useLike({ post: post });
+  const { starred, toggleStar, starCount } = useStar({ post: post });
   const { reposted, toggleRepost, repostCount } = useRepost({ post: post });
   const quoteCount = post.quoteCount ?? 0;
   const { muted, toggleMuteUser } = useMuteUser({ author: post.author });
@@ -68,7 +68,7 @@ export default function PostActions(props: Props) {
   if (mode === "thread") {
     return (
       <div>
-        {(likeCount > 0 || repostCount > 0) && (
+        {(starCount > 0 || repostCount > 0) && (
           <div className="border-skin-base mt-3 flex flex-wrap items-center gap-3 border-y py-2">
             {repostCount > 0 && (
               <Link
@@ -96,16 +96,16 @@ export default function PostActions(props: Props) {
                 </span>
               </Link>
             )}
-            {likeCount > 0 && (
+            {starCount > 0 && (
               <Link
                 href={`/dashboard/user/${post.author.handle}/post/${getPostId(
                   post.uri
-                )}/liked-by`}
+                )}/starred-by`}
                 className="text-skin-base flex gap-1 font-semibold"
               >
-                {abbreviateNumber(likeCount)}
+                {abbreviateNumber(starCount)}
                 <span className="text-skin-tertiary font-medium">
-                  Star{likeCount > 1 && "s"}
+                  Star{starCount > 1 && "s"}
                 </span>
               </Link>
             )}
@@ -181,15 +181,15 @@ export default function PostActions(props: Props) {
           <Button
             onClick={(e) => {
               e.stopPropagation();
-              toggleLike.mutate();
+              toggleStar.mutate();
             }}
             className={
-              liked
-                ? "text-skin-icon-like"
-                : "text-skin-icon-muted hover:text-skin-icon-like"
+              starred
+                ? "text-skin-icon-star"
+                : "text-skin-icon-muted hover:text-skin-icon-star"
             }
           >
-            {liked ? (
+            {starred ? (
               <BiSolidStar className="text-xl" />
             ) : (
               <BiStar className="text-xl" />
@@ -328,21 +328,21 @@ export default function PostActions(props: Props) {
       <Button
         onClick={(e) => {
           e.stopPropagation();
-          toggleLike.mutate();
+          toggleStar.mutate();
         }}
         className={`text-sm font-medium ${
-          liked
-            ? "text-skin-icon-like"
-            : "text-skin-icon-muted hover:text-skin-icon-like"
+          starred
+            ? "text-skin-icon-star"
+            : "text-skin-icon-muted hover:text-skin-icon-star"
         }
           `}
       >
-        {liked ? (
+        {starred ? (
           <BiSolidStar className="text-lg" />
         ) : (
           <BiStar className="text-lg" />
         )}
-        {likeCount > 0 && abbreviateNumber(likeCount)}
+        {starCount > 0 && abbreviateNumber(starCount)}
       </Button>
 
       <Dropdown>

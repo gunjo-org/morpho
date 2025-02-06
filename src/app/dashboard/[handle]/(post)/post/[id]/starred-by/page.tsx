@@ -1,9 +1,9 @@
-import LikedByContainer from "@/containers/thread/LikedByContainer";
+import StarredByContainer from "@/containers/thread/StarredByContainer";
 import type { Metadata } from "next";
 
 export function generateMetadata({ params }: Props): Metadata {
-  const title = `@${params.handle}'s Post Liked By`;
-  const descripton = `Users who have liked @${params.handle}'s post`;
+  const title = `@${params.handle}'s Post Starred By`;
+  const descripton = `Users who have starred @${params.handle}'s post`;
 
   return {
     title: title,
@@ -24,9 +24,9 @@ export default function Page(props: Props) {
   return (
     <section>
       <h2 className="text-skin-base mb-2 px-3 text-2xl font-semibold md:px-0">
-        Liked by
+        Starred by
       </h2>
-      <LikedByContainer handle={handle} id={id} />
+      <StarredByContainer handle={handle} id={id} />
     </section>
   );
 }

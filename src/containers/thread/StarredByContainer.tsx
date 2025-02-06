@@ -4,7 +4,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import ProfileCardSkeleton from "@/components/contentDisplay/profileCard/ProfileCardSkeleton";
 import ProfileCard from "@/components/contentDisplay/profileCard/ProfileCard";
 import { Fragment } from "react";
-import { getPostLikes } from "@/lib/api/bsky/feed";
+import { getPostStars } from "@/lib/api/bsky/feed";
 import FeedAlert from "@/components/feedback/feedAlert/FeedAlert";
 import LoadingSpinner from "@/components/status/loadingSpinner/LoadingSpinner";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -15,7 +15,7 @@ interface Props {
   id: string;
 }
 
-export default function LikedByContainer(props: Props) {
+export default function StarredByContainer(props: Props) {
   const { handle, id } = props;
   const agent = useAgent();
   const {
@@ -28,19 +28,19 @@ export default function LikedByContainer(props: Props) {
     fetchNextPage,
     hasNextPage,
   } = useInfiniteQuery({
-    queryKey: ["getPostLikes", id],
+    queryKey: ["getPostStars", id],
     queryFn: async ({ pageParam }) => {
       const { data } = await agent.resolveHandle({ handle });
       if (!data) return;
       const uri = `at://${data.did}/app.bsky.feed.post/${id}`;
-      return getPostLikes(agent, uri, pageParam);
+      return getPostStars(agent, uri, pageParam);
     },
     initialPageParam: "",
     getNextPageParam: (lastPage) => lastPage?.cursor,
   });
 
   const dataLength = profiles?.pages.reduce(
-    (acc, page) => acc + (page?.likes.length ?? 0),
+    (acc, page) => acc + (page?.stars.length ?? 0),
     0,
   );
 
@@ -58,7 +58,7 @@ export default function LikedByContainer(props: Props) {
       >
         {profiles &&
           profiles.pages
-            .flatMap((page) => page?.likes)
+            .flatMap((page) => page?.stars)
             .map((profile, i) => (
               <Fragment key={i}>
                 {profile && (
@@ -76,7 +76,7 @@ export default function LikedByContainer(props: Props) {
         <div className="px-3 md:px-0">
           <FeedAlert
             variant="empty"
-            message="No one has liked this post... yet"
+            message="No one has starred this post... yet"
             standalone={true}
           />
         </div>

@@ -12,7 +12,7 @@ interface Props {
 
 export const useMuteKey = (did: string) => ["mute", did];
 
-export default function useLike(props: Props) {
+export default function useStar(props: Props) {
   const { author } = props;
   const agent = useAgent();
   const [muted, setMuted] = useState(!!author.viewer?.muted);

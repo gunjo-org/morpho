@@ -3,7 +3,7 @@ import {
   getUserPosts,
   getUserReplyPosts,
   getUserMediaPosts,
-  getUserLikes,
+  getUserStars,
 } from "../../../api/bsky/feed";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
@@ -30,8 +30,8 @@ export default function useProfilePosts(props: Props) {
         return getUserReplyPosts;
       case "media":
         return getUserMediaPosts;
-      case "likes":
-        return getUserLikes;
+      case "stars":
+        return getUserStars;
       default:
         throw new Error("Invalid mode");
     }

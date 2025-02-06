@@ -11,7 +11,7 @@ interface Props {
 
 export const useRepostKey = (postUri: string) => ["repost", postUri];
 
-export default function useLike(props: Props) {
+export default function useStar(props: Props) {
   const { post } = props;
   const agent = useAgent();
   const queryClient = useQueryClient();

@@ -64,7 +64,7 @@ export default {
             base: withOpacity("--color-icon-base"),
             muted: withOpacity("--color-icon-muted"),
             inverted: withOpacity("--color-icon-inverted"),
-            like: withOpacity("--color-icon-like"),
+            star: withOpacity("--color-icon-star"),
             repost: withOpacity("--color-icon-repost"),
           },
         },

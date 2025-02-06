@@ -86,13 +86,13 @@ export const toggleSaveFeed = async (agent: Agent, feed: string) => {
   });
 };
 
-export const likeFeed = async (agent: Agent, uri: string, cid: string) => {
-  const like = await agent.like(uri, cid);
-  return like;
+export const starFeed = async (agent: Agent, uri: string, cid: string) => {
+  const star = await agent.star(uri, cid);
+  return star;
 };
 
-export const unlikeFeed = async (agent: Agent, likeUri: string) => {
-  await agent.deleteLike(likeUri);
+export const unstarFeed = async (agent: Agent, starUri: string) => {
+  await agent.deleteStar(starUri);
 };
 
 export const getTimeline = async (agent: Agent, cursor?: string) => {
@@ -158,43 +158,43 @@ export const getUserMediaPosts = async (
   return posts;
 };
 
-export const getUserLikes = async (
+export const getUserStars = async (
   agent: Agent,
   handle: string,
   cursor: string,
 ) => {
   if (!agent) agent = await getAgentFromServer();
-  const likes = await agent.app.bsky.feed.getActorLikes({
+  const stars = await agent.app.bsky.feed.getActorStars({
     actor: handle,
     cursor: cursor,
   });
 
-  if (!likes.success) throw new Error("Could not fetch likes");
-  return likes;
+  if (!stars.success) throw new Error("Could not fetch stars");
+  return stars;
 };
 
-export const likePost = async (agent: Agent, uri: string, cid: string) => {
+export const starPost = async (agent: Agent, uri: string, cid: string) => {
   try {
-    const like = await agent.like(uri, cid);
-    return like;
+    const star = await agent.star(uri, cid);
+    return star;
   } catch (e) {
-    throw new Error("Could not like post");
+    throw new Error("Could not star post");
   }
 };
 
-export const unlikePost = async (agent: Agent, likeUri: string) => {
+export const unstarPost = async (agent: Agent, starUri: string) => {
   try {
-    const unlike = await agent.deleteLike(likeUri);
-    return unlike;
+    const unstar = await agent.deleteStar(starUri);
+    return unstar;
   } catch (e) {
-    throw new Error("Could not unlike post");
+    throw new Error("Could not unstar post");
   }
 };
 
 export const repost = async (agent: Agent, uri: string, cid: string) => {
   try {
-    const like = await agent.repost(uri, cid);
-    return like;
+    const star = await agent.repost(uri, cid);
+    return star;
   } catch (e) {
     throw new Error("Could not repost");
   }
@@ -202,8 +202,8 @@ export const repost = async (agent: Agent, uri: string, cid: string) => {
 
 export const unRepost = async (agent: Agent, repostUri: string) => {
   try {
-    const unlike = await agent.deleteRepost(repostUri);
-    return unlike;
+    const unstar = await agent.deleteRepost(repostUri);
+    return unstar;
   } catch (e) {
     throw new Error("Could not delete repost");
   }
@@ -239,16 +239,16 @@ export const getPostThread = async (uri: string, agent?: Agent) => {
   }
 };
 
-export const getPostLikes = async (
+export const getPostStars = async (
   agent: Agent,
   uri: string,
   cursor: string,
 ) => {
   try {
-    const likes = await agent.getLikes({ uri: uri, cursor: cursor, limit: 50 });
-    return likes.data;
+    const stars = await agent.getStars({ uri: uri, cursor: cursor, limit: 50 });
+    return stars.data;
   } catch (e) {
-    throw new Error("Could not fetch post likes");
+    throw new Error("Could not fetch post stars");
   }
 };
 
@@ -258,12 +258,12 @@ export const getPostReposts = async (
   cursor: string,
 ) => {
   try {
-    const likes = await agent.getRepostedBy({
+    const stars = await agent.getRepostedBy({
       uri: uri,
       cursor: cursor,
       limit: 50,
     });
-    return likes.data;
+    return stars.data;
   } catch (e) {
     throw new Error("Could not fetch post reposts");
   }

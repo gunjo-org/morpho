@@ -22,7 +22,7 @@ interface Props {
 export default function FeedItem(props: Props) {
   const { feedItem, saved, rounded = true } = props;
   const agent = useAgent();
-  const { avatar, displayName, description, likeCount, creator } = feedItem;
+  const { avatar, displayName, description, starCount, creator } = feedItem;
   const [isSaved, setIsSaved] = useState(saved);
   const router = useRouter();
   const queryClient = useQueryClient();
@@ -87,7 +87,7 @@ export default function FeedItem(props: Props) {
       <p className="text-skin-base break-words">{description}</p>
       <small className="text-skin-secondary flex items-center gap-1 font-medium">
         <BiSolidStar className="text-skin-icon-base" />
-        <span>{likeCount ?? 0}</span>
+        <span>{starCount ?? 0}</span>
       </small>
     </Link>
   );
