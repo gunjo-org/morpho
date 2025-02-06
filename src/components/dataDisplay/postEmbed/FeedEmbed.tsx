@@ -53,7 +53,7 @@ export default function FeedEmbed(props: Props) {
           )}
           <small className="text-skin-secondary flex items-center gap-1 font-medium">
             <BiSolidStar />
-            <span>{feed.starCount ?? 0}</span>
+            <span>{feed.likeCount ?? 0}</span>
           </small>
         </Link>
       )}
