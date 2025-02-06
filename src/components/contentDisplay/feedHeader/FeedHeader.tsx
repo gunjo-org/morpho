@@ -165,7 +165,7 @@ export default function FeedHeader(props: Props) {
       )}
       <small className="text-skin-secondary flex items-center gap-1 font-medium">
         <BiSolidStar className="text-skin-icon-base" />
-        <span>{feedInfo.view.starCount}</span>
+        <span>{feedInfo.view.likeCount}</span>
       </small>
     </article>
   );
