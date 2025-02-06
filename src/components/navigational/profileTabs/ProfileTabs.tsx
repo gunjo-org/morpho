@@ -29,9 +29,9 @@ export default function ProfileTabs() {
           isActive={pathname === `${basePath}/media`}
         />
         <TabItem
-          label="Stars"
-          path={`${basePath}/stars`}
-          isActive={pathname === `${basePath}/stars`}
+          label="Likes"
+          path={`${basePath}/likes`}
+          isActive={pathname === `${basePath}/likes`}
         />
         <TabItem
           label="Lists"

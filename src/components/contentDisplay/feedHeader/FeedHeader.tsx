@@ -151,7 +151,7 @@ export default function FeedHeader(props: Props) {
             </Button>
             <Button onClick={toggleLike}>
               {likeUri && (
-                <BiSolidStar className="text-skin-icon-like text-lg" />
+                <BiSolidStar className="text-skin-icon-star text-lg" />
               )}
               {!likeUri && <BiStar className="text-skin-icon-muted text-lg" />}
             </Button>

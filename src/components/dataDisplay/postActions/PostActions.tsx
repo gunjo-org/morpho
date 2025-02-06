@@ -105,7 +105,7 @@ export default function PostActions(props: Props) {
               >
                 {abbreviateNumber(likeCount)}
                 <span className="text-skin-tertiary font-medium">
-                  Star{likeCount > 1 && "s"}
+                  Like{likeCount > 1 && "s"}
                 </span>
               </Link>
             )}
@@ -185,8 +185,8 @@ export default function PostActions(props: Props) {
             }}
             className={
               liked
-                ? "text-skin-icon-like"
-                : "text-skin-icon-muted hover:text-skin-icon-like"
+                ? "text-skin-icon-star"
+                : "text-skin-icon-muted hover:text-skin-icon-star"
             }
           >
             {liked ? (
@@ -332,8 +332,8 @@ export default function PostActions(props: Props) {
         }}
         className={`text-sm font-medium ${
           liked
-            ? "text-skin-icon-like"
-            : "text-skin-icon-muted hover:text-skin-icon-like"
+            ? "text-skin-icon-star"
+            : "text-skin-icon-muted hover:text-skin-icon-star"
         }
           `}
       >
