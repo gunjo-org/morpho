@@ -87,7 +87,7 @@ export const toggleSaveFeed = async (agent: Agent, feed: string) => {
 };
 
 export const starFeed = async (agent: Agent, uri: string, cid: string) => {
-  const star = await agent.star(uri, cid);
+  const star = await agent.like(uri, cid);
   return star;
 };
 
