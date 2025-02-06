@@ -92,7 +92,7 @@ export const starFeed = async (agent: Agent, uri: string, cid: string) => {
 };
 
 export const unstarFeed = async (agent: Agent, starUri: string) => {
-  await agent.deleteStar(starUri);
+  await agent.deleteLike(starUri);
 };
 
 export const getTimeline = async (agent: Agent, cursor?: string) => {
