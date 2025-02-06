@@ -164,7 +164,7 @@ export const getUserStars = async (
   cursor: string,
 ) => {
   if (!agent) agent = await getAgentFromServer();
-  const stars = await agent.app.bsky.feed.getActorStars({
+  const stars = await agent.app.bsky.feed.getActorLikes({
     actor: handle,
     cursor: cursor,
   });
