@@ -50,7 +50,7 @@ export default function FeedTabs() {
               key={"Following"}
               isActive={pathname === "/i/home"}
               label={"Following"}
-              path={"/home"}
+              path={"/i/home"}
             />
             {savedFeeds &&
               savedFeeds

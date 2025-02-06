@@ -9,7 +9,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
       : "Feed";
   
     return {
-      title: title + " - Ouranos",
+      title: title + " - Gunjo",
       description: "Feed",
     };
   }

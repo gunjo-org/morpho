@@ -71,7 +71,7 @@ export default function AppBar() {
         href="/i/sponsorship"
         icon={<BiDonateHeart className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidDonateHeart className="text-2xl md:text-3xl" />}
-        title="Donate"
+        title="Sponsorship"
         isActive={pathname === "/i/sponsorship"}
       />
     </nav>

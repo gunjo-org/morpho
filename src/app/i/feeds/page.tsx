@@ -23,7 +23,7 @@ export default function Page(props: Props) {
         <div className="mx-3 mb-2 flex items-center justify-between md:mx-0">
           <h2 className="text-skin-base text-2xl font-semibold">My Feeds</h2>
           <Link
-            href="/dashboard/settings/my-feeds"
+            href="/i/settings/my-feeds"
             className="font-medium text-skin-base border border-skin-base bg-skin-secondary hover:brightness-95 px-3 py-1.5 rounded-xl"
           >
             Edit feeds
