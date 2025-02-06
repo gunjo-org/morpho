@@ -49,7 +49,7 @@ export default function FeedHeader(props: Props) {
       setIsSaved(feedInfo.isSaved);
       setIsPinned(feedInfo.isPinned);
       setIsStarred(feedInfo.isStarred);
-      setStarUri(feedInfo.view.viewer?.star);
+      setLikeUri(feedInfo.view.viewer?.star);
     }
   }, [feedInfo]);
 
