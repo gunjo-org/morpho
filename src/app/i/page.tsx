@@ -10,7 +10,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (status === "authenticated" && session?.user.bskySession) {
-      router.push("/home");
+      router.push("/i/home");
     }
   }, [router, status, session?.user.bskySession]);
 
