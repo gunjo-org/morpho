@@ -36,8 +36,13 @@ export function isInvalidHandle(handle: string): boolean {
 
 export function getNotificationLabel(reason: string) {
   switch (reason) {
+<<<<<<< HEAD
     case "star":
       return "starred your post";
+=======
+    case "like":
+      return "liked your post";
+>>>>>>> parent of 9448c0c (edit path)
     case "follow":
       return "followed you";
     case "repost":

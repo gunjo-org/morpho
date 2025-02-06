@@ -1,5 +1,5 @@
 type NotificationReason =
-  | "star"
+  | "like"
   | "follow"
   | "repost"
   | "quote"

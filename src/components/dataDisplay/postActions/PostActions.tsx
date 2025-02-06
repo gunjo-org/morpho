@@ -105,7 +105,11 @@ export default function PostActions(props: Props) {
               >
                 {abbreviateNumber(starCount)}
                 <span className="text-skin-tertiary font-medium">
+<<<<<<< HEAD
                   Star{starCount > 1 && "s"}
+=======
+                  Like{likeCount > 1 && "s"}
+>>>>>>> parent of 9448c0c (edit path)
                 </span>
               </Link>
             )}

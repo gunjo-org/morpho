@@ -18,7 +18,7 @@ interface UploadImage extends File {
   altText?: string;
 }
 
-enum StarlyType {
+enum LikelyType {
   HTML,
   Text,
   Image,
@@ -30,7 +30,7 @@ enum StarlyType {
 
 interface LinkMeta {
   error?: string;
-  starlyType: StarlyType;
+  likelyType: LikelyType;
   url: string;
   title?: string;
   description?: string;
