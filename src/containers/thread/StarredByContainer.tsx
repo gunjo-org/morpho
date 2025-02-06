@@ -40,7 +40,7 @@ export default function StarredByContainer(props: Props) {
   });
 
   const dataLength = profiles?.pages.reduce(
-    (acc, page) => acc + (page?.stars.length ?? 0),
+    (acc, page) => acc + (page?.likes.length ?? 0),
     0,
   );
 
@@ -58,7 +58,7 @@ export default function StarredByContainer(props: Props) {
       >
         {profiles &&
           profiles.pages
-            .flatMap((page) => page?.stars)
+            .flatMap((page) => page?.likes)
             .map((profile, i) => (
               <Fragment key={i}>
                 {profile && (
