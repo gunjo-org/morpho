@@ -58,7 +58,7 @@ export function getFeedAlertIcon(variant: FeedAlert) {
 export const getNotificationIcon = (reason: string) => {
   switch (reason) {
     case "like":
-      return <BiSolidStar className="text-skin-icon-like shrink-0 text-2xl" />;
+      return <BiSolidStar className="text-skin-icon-star shrink-0 text-2xl" />;
     case "repost":
       return <BiRepost className="text-skin-icon-repost shrink-0 text-2xl" />;
     case "follow":

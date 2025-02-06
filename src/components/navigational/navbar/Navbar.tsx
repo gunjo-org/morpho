@@ -10,6 +10,8 @@ import {
   BiSolidPlanet,
   BiCog,
   BiSolidCog,
+  BiDonateHeart,
+  BiSolidDonateHeart,
 } from "react-icons/bi";
 import { PiMagnifyingGlassBold, PiMagnifyingGlassFill } from "react-icons/pi";
 import { HiClipboardList, HiOutlineClipboardList } from "react-icons/hi";
@@ -37,35 +39,35 @@ export default function Navbar() {
   return (
     <nav className="inline-flex flex-col gap-5 lg:ml-1.5">
       <NavItem
-        href="/dashboard/home"
+        href="/i/home"
         icon={<BiHome className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidHome className="text-2xl md:text-3xl" />}
         title="Home"
-        isActive={pathname === "/dashboard/home"}
+        isActive={pathname === "/i/home"}
       />
       <NavItem
-        href="/dashboard/search"
+        href="/i/search"
         icon={<PiMagnifyingGlassBold className="text-2xl md:text-3xl" />}
         activeIcon={<PiMagnifyingGlassFill className="text-2xl md:text-3xl" />}
         title="Search"
         isActive={pathname.includes("search")}
       />
       <NavItem
-        href="/dashboard/feeds"
+        href="/i/feeds"
         icon={<BiPlanet className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidPlanet className="text-2xl md:text-3xl" />}
         title="Feeds"
-        isActive={pathname === "/dashboard/feeds"}
+        isActive={pathname === "/i/feeds"}
       />
       <NavItem
-        href="/dashboard/lists"
+        href="/i/lists"
         icon={<HiOutlineClipboardList className="text-2xl md:text-3xl" />}
         activeIcon={<HiClipboardList className="text-2xl md:text-3xl" />}
         title="Lists"
-        isActive={pathname === "/dashboard/lists"}
+        isActive={pathname === "/i/lists"}
       />
       <NavItem
-        href="/dashboard/notifications"
+        href="/i/notifications"
         icon={<FaRegBell className="text-2xl md:text-3xl" />}
         activeIcon={<FaBell className="text-2xl md:text-3xl" />}
         title="Notifications"
@@ -73,11 +75,18 @@ export default function Navbar() {
         badge={notificationsCount ?? 0}
       />
       <NavItem
-        href="/dashboard/settings"
+        href="/i/settings"
         icon={<BiCog className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidCog className="text-2xl md:text-3xl" />}
         title="Settings"
         isActive={pathname.includes("settings")}
+      />
+      <NavItem
+        href="/i/sponsorship"
+        icon={<BiDonateHeart className="text-2xl md:text-3xl" />}
+        activeIcon={<BiSolidDonateHeart className="text-2xl md:text-3xl" />}
+        title="Sponsorship"
+        isActive={pathname === "/i/sponsorship"}
       />
     </nav>
   );

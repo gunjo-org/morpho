@@ -185,8 +185,8 @@ export default function PostActions(props: Props) {
             }}
             className={
               liked
-                ? "text-skin-icon-like"
-                : "text-skin-icon-muted hover:text-skin-icon-like"
+                ? "text-skin-icon-star"
+                : "text-skin-icon-muted hover:text-skin-icon-star"
             }
           >
             {liked ? (
@@ -332,8 +332,8 @@ export default function PostActions(props: Props) {
         }}
         className={`text-sm font-medium ${
           liked
-            ? "text-skin-icon-like"
-            : "text-skin-icon-muted hover:text-skin-icon-like"
+            ? "text-skin-icon-star"
+            : "text-skin-icon-muted hover:text-skin-icon-star"
         }
           `}
       >

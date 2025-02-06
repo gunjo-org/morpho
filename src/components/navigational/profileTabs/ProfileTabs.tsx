@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function ProfileTabs() {
   const pathname = usePathname();
-  const basePath = pathname.split("/").slice(0, 4).join("/");
+  const basePath = pathname.split("/").slice(0, 3).join("/");
   const { data: session } = useSession();
 
   return (
@@ -28,13 +28,11 @@ export default function ProfileTabs() {
           path={`${basePath}/media`}
           isActive={pathname === `${basePath}/media`}
         />
-        {session?.user?.handle === pathname.split("/")[3] && (
-          <TabItem
-            label="Likes"
-            path={`${basePath}/likes`}
-            isActive={pathname === `${basePath}/likes`}
-          />
-        )}
+        <TabItem
+          label="Likes"
+          path={`${basePath}/likes`}
+          isActive={pathname === `${basePath}/likes`}
+        />
         <TabItem
           label="Lists"
           path={`${basePath}/lists`}

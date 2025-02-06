@@ -36,7 +36,7 @@
         --color-icon-base: 64, 64, 64; /* text-neutral-700 */
         --color-icon-muted: 115, 115, 115; /* text-neutral-500 */
         --color-icon-inverted: 255, 255, 255; /* bg-white */
-        --color-icon-like: 214, 158, 46; /* text-yellow-600 */
+        --color-icon-star: 214, 158, 46; /* text-yellow-600 */
         --color-icon-repost: 22, 163, 74; /* text-green-600 */
 
         /* Status */
@@ -79,7 +79,7 @@
         --color-icon-base: 168, 162, 158; /* text-neutral-400 */
         --color-icon-muted: 115, 115, 115; /* text-neutral-500 */
         --color-icon-inverted: 255, 255, 255; /* bg-white */
-        --color-icon-like: 236, 201, 75; /* text-yellow-500 */
+        --color-icon-star: 236, 201, 75; /* text-yellow-500 */
         --color-icon-repost: 74, 222, 128; /* text-green-400 */
 
         /* Status */
@@ -122,7 +122,7 @@
         --color-icon-base: 168, 162, 158; /* text-neutral-400 */
         --color-icon-muted: 115, 115, 115; /* text-neutral-500 */
         --color-icon-inverted: 255, 255, 255; /* bg-white */
-        --color-icon-like: 236, 201, 75; /* text-yellow-500 */
+        --color-icon-star: 236, 201, 75; /* text-yellow-500 */
         --color-icon-repost: 74, 222, 128; /* text-green-400 */
 
         /* Status */
