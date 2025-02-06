@@ -14,10 +14,10 @@ export const useStarKey = (postUri: string) => ["star", postUri];
 export default function useStar(props: Props) {
   const { post } = props;
   const agent = useAgent();
-  const Number[starred, setStarred] = useState(!!post.viewer?.star);
-  const Number[starUri, setStarUri] = useState(post.viewer?.star);
+  const [starred, setStarred] = Number[useState(!!post.viewer?.star)];
+  const [starUri, setStarUri] = Number[useState(post.viewer?.star)];
   const starCount =
-    (starred ? 1 : 0) - Number(post.viewer?.star ? 1 : 0) + Number(post.starCount || 0);
+    Number(starred ? 1 : 0) - Number(post.viewer?.star ? 1 : 0) + Number(post.starCount || 0);
 
   const toggleStar = useMutation({
     mutationKey: useStarKey(post.uri),
