@@ -1,7 +1,7 @@
 import { AppBskyFeedDefs } from "@atproto/api";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { likePost, unlikePost } from "../../../api/bsky/feed";
+import { starPost, unstarPost } from "../../../api/bsky/feed";
 import toast from "react-hot-toast";
 import { useAgent } from "@/app/providers/agent";
 
