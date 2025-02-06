@@ -4,7 +4,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import ProfileCardSkeleton from "@/components/contentDisplay/profileCard/ProfileCardSkeleton";
 import ProfileCard from "@/components/contentDisplay/profileCard/ProfileCard";
 import { Fragment } from "react";
-import { getPostStars } from "@/lib/api/bsky/feed";
+import { getPostLikes } from "@/lib/api/bsky/feed";
 import FeedAlert from "@/components/feedback/feedAlert/FeedAlert";
 import LoadingSpinner from "@/components/status/loadingSpinner/LoadingSpinner";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -15,7 +15,7 @@ interface Props {
   id: string;
 }
 
-export default function StarredByContainer(props: Props) {
+export default function LikedByContainer(props: Props) {
   const { handle, id } = props;
   const agent = useAgent();
   const {
@@ -28,12 +28,12 @@ export default function StarredByContainer(props: Props) {
     fetchNextPage,
     hasNextPage,
   } = useInfiniteQuery({
-    queryKey: ["getPostStars", id],
+    queryKey: ["getPostLikes", id],
     queryFn: async ({ pageParam }) => {
       const { data } = await agent.resolveHandle({ handle });
       if (!data) return;
       const uri = `at://${data.did}/app.bsky.feed.post/${id}`;
-      return getPostStars(agent, uri, pageParam);
+      return getPostLikes(agent, uri, pageParam);
     },
     initialPageParam: "",
     getNextPageParam: (lastPage) => lastPage?.cursor,
@@ -76,7 +76,7 @@ export default function StarredByContainer(props: Props) {
         <div className="px-3 md:px-0">
           <FeedAlert
             variant="empty"
-            message="No one has starred this post... yet"
+            message="No one has liked this post... yet"
             standalone={true}
           />
         </div>

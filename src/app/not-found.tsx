@@ -16,7 +16,7 @@ export default function NotFound() {
         The page you are looking for could not be found
       </h1>
       <div className="mt-6 flex justify-center">
-        <Button onClick={() => router.push("/home")}>Go Home</Button>
+        <Button onClick={() => router.push("/dashboard/home")}>Go Home</Button>
       </div>
     </main>
   );

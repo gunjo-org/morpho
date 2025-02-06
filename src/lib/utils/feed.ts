@@ -33,9 +33,9 @@ export function filterFeed(feed: FeedViewPost, feedFilter: FeedFilterResult) {
   } else if (feedFilter.hideReposts && isRepost) {
     return false;
   } else if (
-    feedFilter.hideRepliesByStarCount &&
+    feedFilter.hideRepliesByLikeCount &&
     isReply &&
-    (post.starCount || 0) < feedFilter.hideRepliesByStarCount
+    (post.likeCount || 0) < feedFilter.hideRepliesByLikeCount
   ) {
     return false;
   } else if (feedFilter.hideQuotePosts && isEmbed) {
@@ -52,7 +52,7 @@ export function getFeedFilter(
     const defaultFeedViewPref = {
       hideReplies: false,
       hideRepliesByUnfollowed: false,
-      hideRepliesByStarCount: 2,
+      hideRepliesByLikeCount: 2,
       hideReposts: false,
       hideQuotePosts: false,
       $type: "app.bsky.actor.defs#feedViewPref",
@@ -76,7 +76,7 @@ export function getFeedFilter(
   return {
     feed: filters.feed,
     hideReplies: filters.hideReplies ?? false,
-    hideRepliesByStarCount: filters.hideRepliesByStarCount ?? 0,
+    hideRepliesByLikeCount: filters.hideRepliesByLikeCount ?? 0,
     hideRepliesByUnfollowed: filters.hideRepliesByUnfollowed ?? false,
     hideReposts: filters.hideReposts ?? false,
     hideQuotePosts: filters.hideQuotePosts ?? false,
@@ -207,10 +207,10 @@ export const sortThread = (
     const aDate = new Date(a.post.indexedAt);
     const bDate = new Date(b.post.indexedAt);
     return bDate.getTime() - aDate.getTime();
-  } else if (threadPrefs.sort === "most-stars") {
-    const aStars = a.post.starCount ?? 0;
-    const bStars = b.post.starCount ?? 0;
-    return bStars - aStars;
+  } else if (threadPrefs.sort === "most-likes") {
+    const aLikes = a.post.likeCount ?? 0;
+    const bLikes = b.post.likeCount ?? 0;
+    return bLikes - aLikes;
   } else if (threadPrefs.sort === "random") {
     return Math.random() - 0.5;
   }

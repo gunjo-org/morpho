@@ -15,8 +15,8 @@ export default function useFeedInfo(feed: string) {
       const isPinned = savedFeeds.some(
         (savedFeed) => savedFeed.uri === feed && savedFeed.pinned,
       );
-      const isStarred = feedInfo.view.viewer?.star !== null ? true : false;
-      return { ...feedInfo, isSaved, isPinned, isStarred };
+      const isLiked = feedInfo.view.viewer?.like !== null ? true : false;
+      return { ...feedInfo, isSaved, isPinned, isLiked };
     },
   });
 

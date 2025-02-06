@@ -1,9 +1,9 @@
-import StarredByContainer from "@/containers/thread/StarredByContainer";
+import RepostedByContainer from "@/containers/thread/RepostedByContainer";
 import type { Metadata } from "next";
 
 export function generateMetadata({ params }: Props): Metadata {
-  const title = `@${params.handle}'s Post Starred By`;
-  const descripton = `Users who have starred @${params.handle}'s post`;
+  const title = `@${params.handle}'s Post Reposted By`;
+  const descripton = `Users who have reposted @${params.handle}'s post`;
 
   return {
     title: title,
@@ -24,9 +24,9 @@ export default function Page(props: Props) {
   return (
     <section>
       <h2 className="text-skin-base mb-2 px-3 text-2xl font-semibold md:px-0">
-        Starred by
+        Reposted by
       </h2>
-      <StarredByContainer handle={handle} id={id} />
+      <RepostedByContainer handle={handle} id={id} />
     </section>
   );
 }

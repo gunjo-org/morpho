@@ -1,6 +1,6 @@
 import Layout from "@/containers/Layout";
 
-export default function StarredByLayout({
+export default function RepostedByLayout({
   children,
 }: {
   children: React.ReactNode;
