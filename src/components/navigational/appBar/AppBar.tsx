@@ -9,8 +9,8 @@ import { PiMagnifyingGlassBold, PiMagnifyingGlassFill } from "react-icons/pi";
 import { FaRegBell } from "react-icons/fa6";
 import { FaBell } from "react-icons/fa";
 import { HiClipboardList, HiOutlineClipboardList } from "react-icons/hi";
-import { BiMegaphone } from "react-icons/bi";
-import { BiMegaphoneFill } from "react-icons/bi";
+import { BiDonateHeart } from "react-icons/bi";
+import { BiSolidDonateHeart } from "react-icons/bi";
 import { useAgent } from "@/app/providers/agent";
 
 export default function AppBar() {
@@ -69,8 +69,8 @@ export default function AppBar() {
       />
       <NavItem
         href="/i/sponsorship"
-        icon={<BiMegaphone className="text-2xl md:text-3xl" />}
-        activeIcon={<BiMegaphoneFill className="text-2xl md:text-3xl" />}
+        icon={<BiDonateHeart className="text-2xl md:text-3xl" />}
+        activeIcon={<BiSolidDonateHeart className="text-2xl md:text-3xl" />}
         title="Donate"
         isActive={pathname === "/i/sponsorship"}
       />
