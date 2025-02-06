@@ -50,7 +50,7 @@ export type ContentFilterResult = {
 export type FeedFilterResult = {
   feed: string;
   hideReplies: boolean;
-  hideRepliesByLikeCount: number;
+  hideRepliesByStarCount: number;
   hideRepliesByUnfollowed: boolean;
   hideReposts: boolean;
   hideQuotePosts: boolean;

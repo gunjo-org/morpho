@@ -105,7 +105,7 @@ export default function PostActions(props: Props) {
               >
                 {abbreviateNumber(likeCount)}
                 <span className="text-skin-tertiary font-medium">
-                  Like{likeCount > 1 && "s"}
+                  Star{likeCount > 1 && "s"}
                 </span>
               </Link>
             )}

@@ -37,7 +37,7 @@ export function isInvalidHandle(handle: string): boolean {
 export function getNotificationLabel(reason: string) {
   switch (reason) {
     case "like":
-      return "liked your post";
+      return "starred your post";
     case "follow":
       return "followed you";
     case "repost":
