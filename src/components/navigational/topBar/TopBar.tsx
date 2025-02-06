@@ -17,7 +17,7 @@ export default function TopBar(props: Props) {
   return (
     <div className="bg-skin-base border-skin-base sticky top-0 z-[60] flex items-center justify-between border-b px-3 py-2.5 transition-all ease-linear md:hidden">
       <Link
-        href={`/${profile?.handle}`}
+        href={`/i/${profile?.handle}`}
         className="hover:brightness-90"
       >
         <Avatar
@@ -38,7 +38,7 @@ export default function TopBar(props: Props) {
           />
         </div>{" "}
       </Button>
-      <Link href="/settings">
+      <Link href="/i/settings">
         <BiCog className="text-skin-icon-muted hover:text-skin-icon-base text-2xl md:text-3xl" />
       </Link>
     </div>

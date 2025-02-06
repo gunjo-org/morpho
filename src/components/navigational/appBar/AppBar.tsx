@@ -9,6 +9,8 @@ import { PiMagnifyingGlassBold, PiMagnifyingGlassFill } from "react-icons/pi";
 import { FaRegBell } from "react-icons/fa6";
 import { FaBell } from "react-icons/fa";
 import { HiClipboardList, HiOutlineClipboardList } from "react-icons/hi";
+import { BiMegaphone } from "react-icons/bi";
+import { BiMegaphoneFill } from "react-icons/bi";
 import { useAgent } from "@/app/providers/agent";
 
 export default function AppBar() {
@@ -30,40 +32,47 @@ export default function AppBar() {
   return (
     <nav className="bg-skin-base border-skin-base fixed bottom-0 z-40 flex w-full justify-between gap-6 overflow-auto border-t px-6 pb-8 pt-1 transition-all ease-linear md:hidden">
       <NavItem
-        href="/home"
+        href="/i/home"
         icon={<BiHome className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidHome className="text-2xl md:text-3xl" />}
         title="Home"
-        isActive={pathname === "/home"}
+        isActive={pathname === "/i/home"}
       />
       <NavItem
-        href="/search"
+        href="/i/search"
         icon={<PiMagnifyingGlassBold className="text-2xl md:text-3xl" />}
         activeIcon={<PiMagnifyingGlassFill className="text-2xl md:text-3xl" />}
         title="Search"
         isActive={pathname.includes("search")}
       />
       <NavItem
-        href="/feeds"
+        href="/i/feeds"
         icon={<BiPlanet className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidPlanet className="text-2xl md:text-3xl" />}
         title="Feeds"
-        isActive={pathname === "/feeds"}
+        isActive={pathname === "/i/feeds"}
       />
       <NavItem
-        href="/lists"
+        href="/i/lists"
         icon={<HiOutlineClipboardList className="text-2xl md:text-3xl" />}
         activeIcon={<HiClipboardList className="text-2xl md:text-3xl" />}
         title="Lists"
-        isActive={pathname === "/lists"}
+        isActive={pathname === "/i/lists"}
       />
       <NavItem
-        href="/notifications"
+        href="/i/notifications"
         icon={<FaRegBell className="text-2xl md:text-3xl" />}
         activeIcon={<FaBell className="text-2xl md:text-3xl" />}
         title="Notifications"
         isActive={pathname.includes("notifications")}
         badge={notificationsCount ?? 0}
+      />
+      <NavItem
+        href="/i/sponsorship"
+        icon={<BiMegaphone className="text-2xl md:text-3xl" />}
+        activeIcon={<BiMegaphoneFill className="text-2xl md:text-3xl" />}
+        title="Donate"
+        isActive={pathname === "/i/sponsorship"}
       />
     </nav>
   );

@@ -37,11 +37,11 @@ export default function Navbar() {
   return (
     <nav className="inline-flex flex-col gap-5 lg:ml-1.5">
       <NavItem
-        href="/home"
+        href="/i/home"
         icon={<BiHome className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidHome className="text-2xl md:text-3xl" />}
         title="Home"
-        isActive={pathname === "/home"}
+        isActive={pathname === "/i/home"}
       />
       <NavItem
         href="/search"
@@ -55,14 +55,14 @@ export default function Navbar() {
         icon={<BiPlanet className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidPlanet className="text-2xl md:text-3xl" />}
         title="Feeds"
-        isActive={pathname === "/feeds"}
+        isActive={pathname === "/i/feeds"}
       />
       <NavItem
         href="/lists"
         icon={<HiOutlineClipboardList className="text-2xl md:text-3xl" />}
         activeIcon={<HiClipboardList className="text-2xl md:text-3xl" />}
         title="Lists"
-        isActive={pathname === "/lists"}
+        isActive={pathname === "/i/lists"}
       />
       <NavItem
         href="/notifications"

@@ -27,7 +27,7 @@ export default function LoginForm() {
     if (session?.user.bskySession && !formSubmitted) {
       setIsRedirecting(true);
       const id = setTimeout(() => {
-        router.push("/home");
+        router.push("/i/home");
       }, 1000);
 
       return () => clearTimeout(id);
@@ -41,7 +41,7 @@ export default function LoginForm() {
       handle: handle,
       password: password,
       redirect: false,
-      callbackUrl: "/home",
+      callbackUrl: "/i/home",
     });
 
     if (result?.error) {
@@ -51,7 +51,7 @@ export default function LoginForm() {
 
     if (result?.ok) {
       setFormSubmitted(true);
-      router.push("/home");
+      router.push("/i/home");
     }
   };
 
