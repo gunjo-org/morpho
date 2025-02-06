@@ -22,7 +22,7 @@ interface Props {
 export default function FeedItem(props: Props) {
   const { feedItem, saved, rounded = true } = props;
   const agent = useAgent();
-  const { avatar, displayName, description, starCount, creator } = feedItem;
+  const { avatar, displayName, description, likeCount, creator } = feedItem;
   const [isSaved, setIsSaved] = useState(saved);
   const router = useRouter();
   const queryClient = useQueryClient();
