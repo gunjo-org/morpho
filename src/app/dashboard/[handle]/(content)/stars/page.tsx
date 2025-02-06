@@ -13,7 +13,7 @@ export default async function Page(props: Props) {
   const session = await getSessionFromServer();
 
   if (session?.user?.handle !== handle) {
-    redirect(`/dashboard/user/${handle}`);
+    redirect(`/${handle}`);
   }
 
   return <UserPostsConatiner mode="stars" handle={handle} />;
