@@ -7,11 +7,7 @@ export const NOTIFICATION_FILTER: {
   value: NotificationReason | "all";
 }[] = [
   { label: "All", value: "all" },
-<<<<<<< HEAD
   { label: "Star", value: "star" },
-=======
-  { label: "Like", value: "like" },
->>>>>>> parent of 9448c0c (edit path)
   { label: "Follow", value: "follow" },
   { label: "Repost", value: "repost" },
   { label: "Quote", value: "quote" },
