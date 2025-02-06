@@ -17,7 +17,7 @@ export default function useStar(props: Props) {
   const [starred, setStarred] = useState(!!post.viewer?.star);
   const [starUri, setStarUri] = useState(post.viewer?.star);
   const starCount =
-    (liked ? 1 : 0) - (post.viewer?.star ? 1 : 0) + (post.starCount || 0);
+    (starred ? 1 : 0) - (post.viewer?.star ? 1 : 0) + (post.starCount || 0);
 
   const toggleStar = useMutation({
     mutationKey: useStarKey(post.uri),
