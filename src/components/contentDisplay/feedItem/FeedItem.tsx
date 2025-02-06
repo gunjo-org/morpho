@@ -26,7 +26,7 @@ export default function FeedItem(props: Props) {
   const [isSaved, setIsSaved] = useState(saved);
   const router = useRouter();
   const queryClient = useQueryClient();
-
+  const starCount = likeCount;
   const handleSave = async () => {
     setIsSaved((prev) => !prev);
     try {
