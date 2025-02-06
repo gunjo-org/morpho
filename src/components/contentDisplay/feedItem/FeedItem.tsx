@@ -26,7 +26,7 @@ export default function FeedItem(props: Props) {
   const [isSaved, setIsSaved] = useState(saved);
   const router = useRouter();
   const queryClient = useQueryClient();
-  const starCount = likeCount;
+
   const handleSave = async () => {
     setIsSaved((prev) => !prev);
     try {
@@ -87,7 +87,7 @@ export default function FeedItem(props: Props) {
       <p className="text-skin-base break-words">{description}</p>
       <small className="text-skin-secondary flex items-center gap-1 font-medium">
         <BiSolidStar className="text-skin-icon-base" />
-        <span>{starCount ?? 0}</span>
+        <span>{likeCount ?? 0}</span>
       </small>
     </Link>
   );
