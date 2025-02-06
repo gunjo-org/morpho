@@ -1,6 +1,6 @@
 import Button from "@/components/actions/button/Button";
 import Dropdown from "@/components/actions/dropdown/Dropdown";
-import useStar from "@/lib/hooks/bsky/feed/useLike";
+import useStar from "@/lib/hooks/bsky/feed/useStar";
 import useRepost from "@/lib/hooks/bsky/feed/useRepost";
 import { useClipboard } from "use-clipboard-copy";
 import { AppBskyFeedPost, type AppBskyFeedDefs } from "@atproto/api";
