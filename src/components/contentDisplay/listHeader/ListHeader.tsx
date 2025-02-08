@@ -40,7 +40,7 @@ export default function FeedHeader(props: Props) {
             <h3 className="text-skin-secondary break-all">
               By{" "}
               <Link
-                href={`/dashboard/user/${listInfo.list.creator.handle}`}
+                href={`/i/${listInfo.list.creator.handle}`}
                 className="hover:text-skin-tertiary font-medium"
               >
                 @{listInfo.list.creator.handle}

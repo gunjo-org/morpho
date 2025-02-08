@@ -30,7 +30,7 @@ function FeedItem(props: FeedItemProps) {
   return (
     <Link
       href={{
-        pathname: `/dashboard/feeds/${encodeURIComponent(
+        pathname: `/i/feeds/${encodeURIComponent(
           feedItem.uri.split(":")[3].split("/")[0],
         )}`,
         query: { uri: feedItem.uri },

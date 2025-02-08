@@ -38,7 +38,7 @@ export default function AtmosphereNotFoundContainer() {
       <ul className="flex flex-col gap-2 mt-2">
         <li>
           <AtmosphereItem
-            url="/dashboard/user/frontpage.fyi"
+            url="/i/frontpage.fyi"
             title="Frontpage"
             description="A decentralised and federated link aggregator built on the same technologies as Bluesky."
             logo={FrontpageLogo.src}
@@ -46,7 +46,7 @@ export default function AtmosphereNotFoundContainer() {
         </li>
         <li>
           <AtmosphereItem
-            url="/dashboard/user/linkat.blue"
+            url="/i/linkat.blue"
             title="Linkat"
             description="Create your Link in Bio for Bluesky."
             logo={LinkatLogo.src}
@@ -54,7 +54,7 @@ export default function AtmosphereNotFoundContainer() {
         </li>
         <li>
           <AtmosphereItem
-            url="/dashboard/user/whtwnd.com"
+            url="/i/whtwnd.com"
             title="White Wind"
             description="A Markdown blog service (AppView) which uses atproto."
             logo={WhiteWindLogo.src}

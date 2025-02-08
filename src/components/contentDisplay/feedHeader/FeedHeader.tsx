@@ -126,7 +126,7 @@ export default function FeedHeader(props: Props) {
             <h3 className="text-skin-secondary break-all">
               By{" "}
               <Link
-                href={`/dashboard/user/${feedInfo.view.creator.handle}`}
+                href={`/i/${feedInfo.view.creator.handle}`}
                 className="hover:text-skin-tertiary font-medium"
               >
                 @{feedInfo.view.creator.handle}

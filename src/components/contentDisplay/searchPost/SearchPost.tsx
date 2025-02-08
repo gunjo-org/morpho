@@ -28,14 +28,14 @@ const SearchPost = memo(function SearchPost(props: Props) {
       onClick={(e) => {
         e.stopPropagation();
         router.push(
-          `/dashboard/user/${post.author.handle}/post/${getPostId(post.uri)}`,
+          `/i/${post.author.handle}/post/${getPostId(post.uri)}`,
         );
       }}
       className="border-skin-base border border-x-0 p-3 last:border-b hover:cursor-pointer hover:bg-skin-secondary md:border-x odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
     >
       <div className="relative flex items-start gap-3">
         <Link
-          href={`/dashboard/user/${author.handle}`}
+          href={`/i/${author.handle}`}
           onClick={(e) => {
             e.stopPropagation();
           }}
@@ -51,7 +51,7 @@ const SearchPost = memo(function SearchPost(props: Props) {
         <div className="flex grow flex-col">
           <div className="flex">
             <Link
-              href={`/dashboard/user/${author.handle}`}
+              href={`/i/${author.handle}`}
               onClick={(e) => {
                 e.stopPropagation();
               }}
@@ -65,7 +65,7 @@ const SearchPost = memo(function SearchPost(props: Props) {
               </span>
             </Link>
             <span className="text-skin-tertiary whitespace-nowrap font-medium">
-              &nbsp;· {getRelativeTime(indexedAt)}
+              &nbsp;&bull; {getRelativeTime(indexedAt)}
             </span>
           </div>
           <PostText record={post.record} />
