@@ -37,7 +37,7 @@ export default function UserActions(props: Props) {
   const clipboard = useClipboard({ copiedTimeout: 3500 });
 
   const handleShare = useCallback(() => {
-    const shareUrl = `https://useouranos.app/dashboard/user/${author.handle}`;
+    const shareUrl = `https://gunjo.org/i/${author.handle}`;
     clipboard.copy(shareUrl);
     toast.success("Link to profile copied to clipboard", {
       id: "Copy profile link",
@@ -45,7 +45,7 @@ export default function UserActions(props: Props) {
   }, [clipboard, author.handle]);
 
   const handleSearch = useCallback(() => {
-    router.push(`/dashboard/search?query=from:${author.handle}+`);
+    router.push(`/i/search?query=from:${author.handle}+`);
   }, [router, author.handle]);
 
   return (

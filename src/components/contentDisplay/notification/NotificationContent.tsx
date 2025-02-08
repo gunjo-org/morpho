@@ -84,7 +84,7 @@ export default function NotificationContnet(props: Props) {
         onClick={(e) => {
           e.stopPropagation();
           router.push(
-            `/dashboard/user/${post?.post.author.handle}/post/${getPostId(uri)}`,
+            `/i/${post?.post.author.handle}/post/${getPostId(uri)}`,
           );
         }}
         className="text-skin-secondary cursor-pointer text-[0.93rem]"

@@ -78,7 +78,7 @@ export default function FeedPost(props: Props) {
       onClick={(e) => {
         e.stopPropagation();
         router.push(
-          `/dashboard/user/${post.post.author.handle}/post/${getPostId(
+          `/i/${post.post.author.handle}/post/${getPostId(
             post.post.uri,
           )}`,
         );
@@ -91,7 +91,7 @@ export default function FeedPost(props: Props) {
         <div
           onClick={(e) => {
             e.stopPropagation();
-            router.push(`/dashboard/user/${author.handle}`);
+            router.push(`/i/${author.handle}`);
           }}
           className="z-20 shrink-0 hover:brightness-90"
         >
@@ -106,7 +106,7 @@ export default function FeedPost(props: Props) {
           {isParent && !reason && <Threadline />}
           <div className="flex">
             <Link
-              href={`/dashboard/user/${author.handle}`}
+              href={`/i/${author.handle}`}
               onClick={(e) => {
                 e.stopPropagation();
               }}
@@ -120,7 +120,7 @@ export default function FeedPost(props: Props) {
               </span>
             </Link>
             <span className="text-skin-tertiary whitespace-nowrap font-medium">
-              &nbsp;· {getRelativeTime(indexedAt)}
+              &nbsp;&bull; {getRelativeTime(indexedAt)}
             </span>
           </div>
           <PostText record={post.post.record} />

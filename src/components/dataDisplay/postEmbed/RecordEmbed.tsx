@@ -28,7 +28,7 @@ export default function RecordEmbed(props: Props) {
         <div
           onClick={(e) => {
             router.push(
-              `/dashboard/user/${record.author.handle}/post/${getPostId(
+              `/i/${record.author.handle}/post/${getPostId(
                 record.uri,
               )}`,
             );
@@ -54,7 +54,7 @@ export default function RecordEmbed(props: Props) {
                 </span>
               </span>
               <span className="text-skin-tertiary whitespace-nowrap font-medium">
-                &nbsp;· {getRelativeTime(record.indexedAt)}
+                &nbsp;&bull; {getRelativeTime(record.indexedAt)}
               </span>
             </div>
             <div className="mt-1">
