@@ -30,7 +30,7 @@ export default function PostTag(props: Props) {
 
   return (
     <Link
-      href={`/i/search?query=%23${encodedTag}`}
+      href={`/search?query=%23${encodedTag}`}
       className="flex flex-wrap items-center bg-skin-base border border-skin-base px-3 py-1.5 rounded-lg text-sm text-skin-secondary font-medium hover:text-skin-base break-all"
       onClick={(e) => e.stopPropagation()}
     >

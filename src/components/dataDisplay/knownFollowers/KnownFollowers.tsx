@@ -45,7 +45,7 @@ export default function KnownFollowers(props: Props) {
   return (
     <Link
       className="flex items-center gap-2 hover:opacity-80"
-      href={`/i/${handle}/known-followers`}
+      href={`/${handle}/known-followers`}
     >
       <div className="flex shrink-0 -space-x-4">
         {profiles &&

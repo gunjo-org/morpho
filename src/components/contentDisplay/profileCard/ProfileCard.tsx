@@ -15,7 +15,7 @@ const ProfileCard = memo(function ProfileCard(props: Props) {
 
   return (
     <Link
-      href={`/i/${profile.handle}`}
+      href={`/${profile.handle}`}
       className={`border-skin-base border border-x-0 p-3 md:border-x ${
         rounded && "md:first:rounded-t-2xl"
       } hover:bg-skin-secondary last:border-b md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0`}

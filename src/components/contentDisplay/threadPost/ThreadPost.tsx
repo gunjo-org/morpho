@@ -39,7 +39,7 @@ export default function ThreadPost(props: Props) {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            router.push(`/i/${author.handle}`);
+            router.push(`/${author.handle}`);
           }}
           className="z-20 shrink-0 hover:brightness-90"
         >
@@ -53,7 +53,7 @@ export default function ThreadPost(props: Props) {
         <div className="flex grow flex-col">
           <div className="flex flex-col">
             <Link
-              href={`/i/${author.handle}`}
+              href={`/${author.handle}`}
               onClick={(e) => {
                 e.stopPropagation();
               }}

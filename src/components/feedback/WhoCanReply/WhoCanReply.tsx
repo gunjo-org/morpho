@@ -54,7 +54,7 @@ export default function WhoCanReply(props: Props) {
           <>
             Users followed and mentioned by{" "}
             <Link
-              href={`/i/${post.author.handle}`}
+              href={`/${post.author.handle}`}
               className="text-skin-link-base hover:text-skin-link-hover font-medium"
             >
               {post.author.handle}
@@ -65,7 +65,7 @@ export default function WhoCanReply(props: Props) {
           <>
             Users followed by{" "}
             <Link
-              href={`/i/${post.author.handle}`}
+              href={`/${post.author.handle}`}
               className="text-skin-link-base hover:text-skin-link-hover font-medium"
             >
               {post.author.handle}
@@ -81,7 +81,7 @@ export default function WhoCanReply(props: Props) {
               <Link
                 key={list.uri}
                 href={{
-                  pathname: `/i/${post.author.handle}/lists/${encodeURIComponent(
+                  pathname: `/${post.author.handle}/lists/${encodeURIComponent(
                     list.uri.split(":")[3].split("/")[2],
                   )}`,
                   query: { uri: list.uri },
