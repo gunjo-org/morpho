@@ -9,7 +9,8 @@ import {
   BiSolidXCircle,
   BiSolidPalette,
   BiSolidPlanet,
-  BiSolidBellOff
+  BiSolidBellOff,
+  BiSupport
 } from "react-icons/bi";
 import { MdRemoveRedEye } from "react-icons/md";
 import { BsFillInfoCircleFill, BsPersonFillSlash } from "react-icons/bs";
@@ -164,12 +165,12 @@ export default async function SettingsContainer() {
             Stripe Dashboard
           </Link>
           <Link
-            href="https://foundation.gunjo.org/help/commerce-disclosure"
+            href="https://foundation.gunjo.org/help/support"
             target="_blank"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
-            <TbScale className="text-skin-icon-base text-xl" />
-            Commerce Disclosure
+            <BiSupport className="text-skin-icon-base text-xl" />
+            Support Hub
           </Link>
         </div>
       </section>
