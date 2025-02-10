@@ -156,14 +156,6 @@ export default async function SettingsContainer() {
         </h3>
         <div className="flex flex-col">
           <Link
-            href="https://foundation.gunjo.org/help/legal-notice"
-            target="_blank"
-            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
-          >
-            <BiSolidDonateHeart className="text-skin-icon-base text-xl" />
-            Become a Sponsor
-          </Link>
-          <Link
             href="https://github.com/gunjo-org/morpho"
             target="_blank"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
@@ -188,6 +180,28 @@ export default async function SettingsContainer() {
             About
           </Link>
         </div>
+      </section>
+      <section>
+        <h3 className="text-skin-base mx-3 mb-2 text-xl font-semibold md:mx-0">
+          Become a Sponsor
+        </h3>
+        <div className="flex flex-col">
+          <Link
+            href="https://donate.stripe.com/"
+            target="_blank"
+            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
+          >
+            <BiSolidDonateHeart className="text-skin-icon-base text-xl" />
+            Manage Sponsorship
+          </Link>
+          <Link
+            href="https://foundation.gunjo.org/help/commerce-disclosure"
+            target="_blank"
+            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
+          >
+            <TbLicense className="text-skin-icon-base text-xl" />
+            Commerce Disclosure
+          </Link>
       </section>
     </section>
   );
