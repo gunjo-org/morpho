@@ -14,7 +14,7 @@ import {
 } from "react-icons/bi";
 import { MdRemoveRedEye } from "react-icons/md";
 import { BsFillInfoCircleFill, BsPersonFillSlash } from "react-icons/bs";
-import { TbLicense, TbScale } from "react-icons/tb";
+import { TbLicense } from "react-icons/tb";
 import { getSessionFromServer } from "@/lib/api/auth/session";
 import { getProfile } from "@/lib/api/bsky/actor";
 import Avatar from "@/components/dataDisplay/avatar/Avatar";
@@ -151,6 +151,7 @@ export default async function SettingsContainer() {
           </Link>
         </section>
       </section>
+
       <section>
         <h3 className="text-skin-base mx-3 mb-2 text-xl font-semibold md:mx-0">
           Manage Sponsorship
@@ -174,6 +175,7 @@ export default async function SettingsContainer() {
           </Link>
         </div>
       </section>
+
       <section>
         <h3 className="text-skin-base mx-3 mb-2 text-xl font-semibold md:mx-0">
           Learn More

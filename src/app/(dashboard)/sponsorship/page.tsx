@@ -1,7 +1,7 @@
 import Layout from "@/containers/Layout";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { BiLogoStripe } from "react-icons/bi";
+import { BiLogoStripe, BiSupport } from "react-icons/bi";
 import { TbScale } from "react-icons/tb";
 
 export const metadata: Metadata = {
@@ -24,6 +24,14 @@ export default function Page() {
           >
             <BiLogoStripe className="text-skin-icon-base text-xl" />
             Become a Sponsor
+          </Link>
+          <Link
+            href="https://foundation.gunjo.org/help/support"
+            target="_blank"
+            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
+          >
+            <BiSupport className="text-skin-icon-base text-xl" />
+            Support Hub
           </Link>
           <Link
             href="https://foundation.gunjo.org/help/commerce-disclosure"
