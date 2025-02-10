@@ -14,6 +14,7 @@ import {
 import { MdRemoveRedEye } from "react-icons/md";
 import { BsFillInfoCircleFill, BsPersonFillSlash } from "react-icons/bs";
 import { TbLicense } from "react-icons/tb";
+import { GoLaw } from "react-icons/go";
 import { getSessionFromServer } from "@/lib/api/auth/session";
 import { getProfile } from "@/lib/api/bsky/actor";
 import Avatar from "@/components/dataDisplay/avatar/Avatar";
@@ -199,7 +200,7 @@ export default async function SettingsContainer() {
             target="_blank"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
-            <TbLicense className="text-skin-icon-base text-xl" />
+            <GoLaw className="text-skin-icon-base text-xl" />
             Commerce Disclosure
           </Link>
         </div>
