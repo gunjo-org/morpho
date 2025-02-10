@@ -3,13 +3,13 @@ import { FaSlidersH } from "react-icons/fa";
 import { ImBubbles2 } from "react-icons/im";
 import {
   BiLogoGithub,
+  BiLogoStripe,
   BiSolidCheckCircle,
   BiSolidEnvelope,
   BiSolidXCircle,
   BiSolidPalette,
   BiSolidPlanet,
-  BiSolidBellOff,
-  BiSolidDonateHeart
+  BiSolidBellOff
 } from "react-icons/bi";
 import { MdRemoveRedEye } from "react-icons/md";
 import { BsFillInfoCircleFill, BsPersonFillSlash } from "react-icons/bs";
@@ -191,7 +191,7 @@ export default async function SettingsContainer() {
             target="_blank"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
-            <BiSolidDonateHeart className="text-skin-icon-base text-xl" />
+            <BiLogoStripe className="text-skin-icon-base text-xl" />
             Manage Sponsorship
           </Link>
           <Link
