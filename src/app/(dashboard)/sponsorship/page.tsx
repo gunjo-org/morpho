@@ -8,11 +8,7 @@ export const metadata: Metadata = {
   description: "Sponsorship",
 };
 
-export default function FeedLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Page() {
   return (
     <Layout>
       <section>
