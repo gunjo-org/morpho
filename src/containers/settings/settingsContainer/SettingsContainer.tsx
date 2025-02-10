@@ -202,6 +202,7 @@ export default async function SettingsContainer() {
             <TbLicense className="text-skin-icon-base text-xl" />
             Commerce Disclosure
           </Link>
+        </div>
       </section>
     </section>
   );
