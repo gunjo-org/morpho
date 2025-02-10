@@ -156,6 +156,14 @@ export default async function SettingsContainer() {
         </h3>
         <div className="flex flex-col">
           <Link
+            href="https://foundation.gunjo.org/help/legal-notice"
+            target="_blank"
+            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
+          >
+            <BiSolidDonateHeart className="text-skin-icon-base text-xl" />
+            Become a Sponsor
+          </Link>
+          <Link
             href="https://github.com/gunjo-org/morpho"
             target="_blank"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
@@ -178,14 +186,6 @@ export default async function SettingsContainer() {
           >
             <BsFillInfoCircleFill className="text-skin-icon-base text-xl" />
             About
-          </Link>
-          <Link
-            href="https://foundation.gunjo.org/help/legal-notice"
-            target="_blank"
-            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
-          >
-            <BiSolidDonateHeart className="text-skin-icon-base text-xl" />
-            Become a Sponsor
           </Link>
         </div>
       </section>
