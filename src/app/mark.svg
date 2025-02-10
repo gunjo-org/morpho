@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="512" height="512"
      viewBox="0 0 600 600">
   <g fill="rgb(65, 102, 245)" transform="rotate(30, 300, 300)" >
     <rect id="a" x="300" y="0" width="156" height="156"
