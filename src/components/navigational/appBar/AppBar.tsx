@@ -4,11 +4,24 @@ import { usePathname } from "next/navigation";
 import NavItem from "../navbar/NavItem";
 import { getUnreadNotificationsCount } from "@/lib/api/bsky/notification";
 import { useQuery } from "@tanstack/react-query";
-import { BiHome, BiSolidHome, BiPlanet, BiSolidPlanet } from "react-icons/bi";
-import { PiMagnifyingGlassBold, PiMagnifyingGlassFill } from "react-icons/pi";
+import {
+  BiHome,
+  BiSolidHome,
+  BiPlanet,
+  BiSolidPlanet,
+  BiDonateHeart,
+  BiSolidDonateHeart
+} from "react-icons/bi";
+import {
+  PiMagnifyingGlassBold,
+  PiMagnifyingGlassFill
+} from "react-icons/pi";
 import { FaRegBell } from "react-icons/fa6";
 import { FaBell } from "react-icons/fa";
-import { HiClipboardList, HiOutlineClipboardList } from "react-icons/hi";
+import {
+  HiClipboardList,
+  HiOutlineClipboardList
+} from "react-icons/hi";
 import { useAgent } from "@/app/providers/agent";
 
 export default function AppBar() {
@@ -64,6 +77,13 @@ export default function AppBar() {
         title="Notifications"
         isActive={pathname.includes("notifications")}
         badge={notificationsCount ?? 0}
+      />
+      <NavItem
+        href="/sponsorship"
+        icon={<BiDonateHeart className="text-2xl md:text-3xl" />}
+        activeIcon={<BiSolidDonateHeart className="text-2xl md:text-3xl" />}
+        title="Sponsorship"
+        isActive={pathname === "/sponsorship"}
       />
     </nav>
   );
