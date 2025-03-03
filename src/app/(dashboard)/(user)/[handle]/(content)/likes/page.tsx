@@ -13,7 +13,7 @@ export default async function Page(props: Props) {
   const session = await getSessionFromServer();
 
   if (session?.user?.handle !== handle) {
-    redirect(`/i/${handle}`);
+    redirect(`/${handle}`);
   }
 
   return <UserPostsConatiner mode="likes" handle={handle} />;

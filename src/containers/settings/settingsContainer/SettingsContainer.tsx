@@ -3,14 +3,16 @@ import { FaSlidersH } from "react-icons/fa";
 import { ImBubbles2 } from "react-icons/im";
 import {
   BiLogoGithub,
+  BiLogoStripe,
   BiSolidCheckCircle,
   BiSolidEnvelope,
   BiSolidXCircle,
   BiSolidPalette,
   BiSolidPlanet,
+  BiSolidBellOff,
+  BiSupport
 } from "react-icons/bi";
 import { MdRemoveRedEye } from "react-icons/md";
-import { BiSolidBellOff } from "react-icons/bi";
 import { BsFillInfoCircleFill, BsPersonFillSlash } from "react-icons/bs";
 import { TbLicense } from "react-icons/tb";
 import { getSessionFromServer } from "@/lib/api/auth/session";
@@ -36,7 +38,7 @@ export default async function SettingsContainer() {
           <div className="border-skin-base mt-2 flex w-full flex-col gap-3 rounded-none border border-x-0 p-3 md:rounded-b-2xl md:rounded-t-2xl md:border-x">
             <div className="flex flex-wrap items-center justify-between gap-3 ">
               <Link
-                href={`/i/${profile.handle}`}
+                href={`/${profile.handle}`}
                 className="flex gap-3"
               >
                 <Avatar
@@ -83,7 +85,7 @@ export default async function SettingsContainer() {
         </h3>
         <div className="flex flex-col">
           <Link
-            href="/i/settings/appearance"
+            href="/settings/appearance"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
             <BiSolidPalette className="text-skin-icon-base text-xl" />
@@ -98,21 +100,21 @@ export default async function SettingsContainer() {
         </h3>
         <div className="flex flex-col">
           <Link
-            href="/i/settings/home-feed"
+            href="/settings/home-feed"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
             <FaSlidersH className="text-skin-icon-base text-xl" />
             Home Feed Preferences
           </Link>
           <Link
-            href="/i/settings/thread-preferences"
+            href="/settings/thread-preferences"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
             <ImBubbles2 className="text-skin-icon-base text-xl" />
             Thread Preferences
           </Link>
           <Link
-            href="/i/settings/my-feeds"
+            href="/settings/my-feeds"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
             <BiSolidPlanet className="text-skin-icon-base text-xl" />
@@ -127,21 +129,21 @@ export default async function SettingsContainer() {
         </h3>
         <section className="flex flex-col">
           <Link
-            href="/i/settings/content-filtering"
+            href="/settings/content-filtering"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
             <MdRemoveRedEye className="text-skin-icon-base text-xl" />
             Content Filtering
           </Link>
           <Link
-            href="/i/settings/muted-users"
+            href="/settings/muted-users"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
             <BiSolidBellOff className="text-skin-icon-base text-xl" />
             Muted Users
           </Link>
           <Link
-            href="/i/settings/blocked-users"
+            href="/settings/blocked-users"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
           >
             <BsPersonFillSlash className="text-skin-icon-base text-xl" />
@@ -149,6 +151,31 @@ export default async function SettingsContainer() {
           </Link>
         </section>
       </section>
+
+      <section>
+        <h3 className="text-skin-base mx-3 mb-2 text-xl font-semibold md:mx-0">
+          Manage Sponsorship
+        </h3>
+        <div className="flex flex-col">
+          <Link
+            href="https://dashboard.stripe.com/"
+            target="_blank"
+            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
+          >
+            <BiLogoStripe className="text-skin-icon-base text-xl" />
+            Stripe Dashboard
+          </Link>
+          <Link
+            href="https://foundation.gunjo.org/help/support"
+            target="_blank"
+            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
+          >
+            <BiSupport className="text-skin-icon-base text-xl" />
+            Support Hub
+          </Link>
+        </div>
+      </section>
+
       <section>
         <h3 className="text-skin-base mx-3 mb-2 text-xl font-semibold md:mx-0">
           Learn More

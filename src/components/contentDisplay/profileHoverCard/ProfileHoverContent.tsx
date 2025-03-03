@@ -40,7 +40,7 @@ export default function ProfileHoverContent(props: Props) {
       <div className="flex flex-wrap justify-between gap-3">
         <div className="flex flex-wrap items-start gap-2">
           <Link
-            href={`/i/${profile.handle}`}
+            href={`/${profile.handle}`}
             className="hover:brightness-90"
           >
             <Avatar
@@ -51,7 +51,7 @@ export default function ProfileHoverContent(props: Props) {
           <div className="flex flex-col">
             <div className="flex flex-wrap gap-x-1.5">
               <Link
-                href={`/i/${profile.handle}`}
+                href={`/${profile.handle}`}
                 className="text-skin-base font-semibold hover:text-skin-secondary"
               >
                 {profile.displayName || profile.handle}
@@ -67,7 +67,7 @@ export default function ProfileHoverContent(props: Props) {
               <ViewerInfo text="Invalid Handle" />
             ) : (
               <Link
-                href={`/i/${profile.handle}`}
+                href={`/${profile.handle}`}
                 className="text-skin-tertiary break-all font-medium"
               >
                 @{profile?.handle}

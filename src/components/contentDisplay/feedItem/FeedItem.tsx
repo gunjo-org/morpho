@@ -45,7 +45,7 @@ export default function FeedItem(props: Props) {
   return (
     <Link
       href={{
-        pathname: `/i/feeds/${encodeURIComponent(
+        pathname: `/feeds/${encodeURIComponent(
           feedItem.uri.split(":")[3].split("/")[0],
         )}`,
         query: { uri: feedItem.uri },

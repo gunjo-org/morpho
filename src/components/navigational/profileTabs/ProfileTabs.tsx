@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function ProfileTabs() {
   const pathname = usePathname();
-  const basePath = pathname.split("/").slice(0, 3).join("/");
+  const basePath = pathname.split("/").slice(0, 2).join("/");
   const { data: session } = useSession();
 
   return (

@@ -37,7 +37,7 @@ export default function PostText(props: Props) {
             {segment.mention?.did && (
               <Link
                 className="text-skin-link-base hover:text-skin-link-hover break-after-auto"
-                href={`/i/${getHandle(segment.text)}`}
+                href={`/${getHandle(segment.text)}`}
                 key={segment.mention?.did}
                 onClick={(e) => e.stopPropagation()}
               >
@@ -94,7 +94,7 @@ export default function PostText(props: Props) {
         text: segment.text,
         component: (
           <Link
-            href={`/i/search?query=%23${encodedTag}`}
+            href={`/search?query=%23${encodedTag}`}
             key={segment.text}
             className="text-skin-link-base hover:text-skin-link-hover break-all"
             onClick={(e) => e.stopPropagation()}

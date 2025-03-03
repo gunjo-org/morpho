@@ -44,7 +44,7 @@ const NotificationItem = memo(function NotificationItem(props: Props) {
                   {allAuthors.slice(0, MAX_AUTHORS_SHOWN).map((author) => (
                     <Link
                       key={author.handle}
-                      href={`/i/${author.handle}`}
+                      href={`/${author.handle}`}
                       className="max-w-fit hover:brightness-90"
                     >
                       <ProfileHoverCard handle={author.handle}>
@@ -71,7 +71,7 @@ const NotificationItem = memo(function NotificationItem(props: Props) {
                   <>
                     <Link
                       key={author.handle}
-                      href={`/i/${author.handle}`}
+                      href={`/${author.handle}`}
                       className="text-skin-base hover:text-skin-secondary break-all font-semibold"
                     >
                       {author.displayName || author.handle}{" "}
@@ -84,7 +84,7 @@ const NotificationItem = memo(function NotificationItem(props: Props) {
                 )}
                 {allAuthors?.length === 1 && (
                   <Link
-                    href={`/i/${author.handle}`}
+                    href={`/${author.handle}`}
                     className="text-skin-base hover:text-skin-secondary break-all font-semibold"
                   >
                     {author.displayName || author.handle}{" "}

@@ -48,9 +48,9 @@ export default function FeedTabs() {
           <Tabs>
             <TabItem
               key={"Following"}
-              isActive={pathname === "/i/home"}
+              isActive={pathname === "/home"}
               label={"Following"}
-              path={"/i/home"}
+              path={"/home"}
             />
             {savedFeeds &&
               savedFeeds

@@ -1,5 +1,5 @@
 import * as HoverCard from "@radix-ui/react-hover-card";
-import ProfileHoverContent from "./PorileHoverContent";
+import ProfileHoverContent from "./ProfileHoverContent";
 
 interface Props {
   children: React.ReactNode;

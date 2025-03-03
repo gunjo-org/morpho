@@ -24,7 +24,7 @@ export default function ListEmbed(props: Props) {
       {depth < 1 && (
         <Link
           href={{
-            pathname: `/i/${
+            pathname: `/${
               list.creator.handle
             }/lists/${encodeURIComponent(formattedUri)}`,
             query: { uri: list.uri },

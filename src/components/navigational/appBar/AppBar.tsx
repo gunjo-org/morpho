@@ -4,13 +4,24 @@ import { usePathname } from "next/navigation";
 import NavItem from "../navbar/NavItem";
 import { getUnreadNotificationsCount } from "@/lib/api/bsky/notification";
 import { useQuery } from "@tanstack/react-query";
-import { BiHome, BiPlanet, BiSolidHome, BiSolidPlanet } from "react-icons/bi";
-import { PiMagnifyingGlassBold, PiMagnifyingGlassFill } from "react-icons/pi";
+import {
+  BiHome,
+  BiSolidHome,
+  BiPlanet,
+  BiSolidPlanet,
+  BiDonateHeart,
+  BiSolidDonateHeart
+} from "react-icons/bi";
+import {
+  PiMagnifyingGlassBold,
+  PiMagnifyingGlassFill
+} from "react-icons/pi";
 import { FaRegBell } from "react-icons/fa6";
 import { FaBell } from "react-icons/fa";
-import { HiClipboardList, HiOutlineClipboardList } from "react-icons/hi";
-import { BiDonateHeart } from "react-icons/bi";
-import { BiSolidDonateHeart } from "react-icons/bi";
+import {
+  HiClipboardList,
+  HiOutlineClipboardList
+} from "react-icons/hi";
 import { useAgent } from "@/app/providers/agent";
 
 export default function AppBar() {
@@ -32,35 +43,35 @@ export default function AppBar() {
   return (
     <nav className="bg-skin-base border-skin-base fixed bottom-0 z-40 flex w-full justify-between gap-6 overflow-auto border-t px-6 pb-8 pt-1 transition-all ease-linear md:hidden">
       <NavItem
-        href="/i/home"
+        href="/home"
         icon={<BiHome className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidHome className="text-2xl md:text-3xl" />}
         title="Home"
-        isActive={pathname === "/i/home"}
+        isActive={pathname === "/home"}
       />
       <NavItem
-        href="/i/search"
+        href="/search"
         icon={<PiMagnifyingGlassBold className="text-2xl md:text-3xl" />}
         activeIcon={<PiMagnifyingGlassFill className="text-2xl md:text-3xl" />}
         title="Search"
         isActive={pathname.includes("search")}
       />
       <NavItem
-        href="/i/feeds"
+        href="/feeds"
         icon={<BiPlanet className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidPlanet className="text-2xl md:text-3xl" />}
         title="Feeds"
-        isActive={pathname === "/i/feeds"}
+        isActive={pathname === "/feeds"}
       />
       <NavItem
-        href="/i/lists"
+        href="/lists"
         icon={<HiOutlineClipboardList className="text-2xl md:text-3xl" />}
         activeIcon={<HiClipboardList className="text-2xl md:text-3xl" />}
         title="Lists"
-        isActive={pathname === "/i/lists"}
+        isActive={pathname === "/lists"}
       />
       <NavItem
-        href="/i/notifications"
+        href="/notifications"
         icon={<FaRegBell className="text-2xl md:text-3xl" />}
         activeIcon={<FaBell className="text-2xl md:text-3xl" />}
         title="Notifications"
@@ -68,11 +79,11 @@ export default function AppBar() {
         badge={notificationsCount ?? 0}
       />
       <NavItem
-        href="/i/sponsorship"
+        href="/sponsorship"
         icon={<BiDonateHeart className="text-2xl md:text-3xl" />}
         activeIcon={<BiSolidDonateHeart className="text-2xl md:text-3xl" />}
         title="Sponsorship"
-        isActive={pathname === "/i/sponsorship"}
+        isActive={pathname === "/sponsorship"}
       />
     </nav>
   );

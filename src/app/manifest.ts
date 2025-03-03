@@ -5,15 +5,13 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Gunjo",
     short_name: "Gunjo",
     description: "Bluesky client for the web",
-    start_url: "/i/home",
+    start_url: "/login",
     display: "standalone",
     background_color: "#fff",
-    theme_color: "#fff",
     icons: [
       {
-        src: "/mark.svg",
+        src: "/favicon.ico",
         sizes: "any",
-        type: "image/x-icon",
       },
     ],
   };

@@ -17,7 +17,7 @@ export default function Aside(props: Props) {
       <div className="flex flex-col items-center gap-3 lg:flex-row border border-skin-base p-2 rounded-full">
         <ComposeButton />
         <Link
-          href={`/i/${handle}`}
+          href={`/${handle}`}
           className="max-w-[7rem] truncate hover:brightness-90"
         >
           <Avatar src={avatar?.replace("avatar", "avatar_thumbnail")} />

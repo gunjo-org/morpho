@@ -47,7 +47,7 @@ export default function PostActions(props: Props) {
 
   const handleShare = useCallback(() => {
     const postId = getPostId(post.uri);
-    const shareUrl = `https://gunjo.org/i/${post.author.handle}/post/${postId}`;
+    const shareUrl = `https://gunjo.org/${post.author.handle}/post/${postId}`;
     clipboard.copy(shareUrl);
     toast.success("Copied link to post", { id: "Copy post link" });
   }, [clipboard, post.uri, post.author.handle]);
@@ -72,7 +72,7 @@ export default function PostActions(props: Props) {
           <div className="border-skin-base mt-3 flex flex-wrap items-center gap-3 border-y py-2">
             {repostCount > 0 && (
               <Link
-                href={`/i/${post.author.handle}/post/${getPostId(
+                href={`/${post.author.handle}/post/${getPostId(
                   post.uri
                 )}/reposted-by`}
                 className="text-skin-base flex gap-1 font-semibold"
@@ -85,7 +85,7 @@ export default function PostActions(props: Props) {
             )}
             {quoteCount > 0 && (
               <Link
-                href={`/i/${post.author.handle}/post/${getPostId(
+                href={`/${post.author.handle}/post/${getPostId(
                   post.uri
                 )}/quotes`}
                 className="text-skin-base flex gap-1 font-semibold"
@@ -98,7 +98,7 @@ export default function PostActions(props: Props) {
             )}
             {likeCount > 0 && (
               <Link
-                href={`/i/${post.author.handle}/post/${getPostId(
+                href={`/${post.author.handle}/post/${getPostId(
                   post.uri
                 )}/liked-by`}
                 className="text-skin-base flex gap-1 font-semibold"
