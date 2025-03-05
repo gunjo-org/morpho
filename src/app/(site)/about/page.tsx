@@ -154,13 +154,13 @@ export default function Page() {
         </h3>
         <p className="text-skin-base mt-3">
           As another way to contribute, if you like to support the project
-          and help keep the site up and running, please follow
+          and help keep the site up and running, please follow{" "}
           <Link
             href="https://gunjo.org/sponsorship"
             className="underline underline-offset-2"
           >
             the navigation menu
-          </Link>
+          </Link>{" "}
           to become a sponsor.
         </p>
       </section>
