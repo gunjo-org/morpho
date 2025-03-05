@@ -7,12 +7,16 @@ export default function Page() {
     <main className="mx-auto mt-0 p-5 md:mt-16">
       <header className="mx-auto flex max-w-xl items-center justify-between animate-fade">
         <div className="flex items-center gap-3">
-          <Image
-            src="/mark.svg"
-            alt="gunjo logo"
-            width={40}
-            height={40}
-          />
+          <Link
+            href="https://foundation.gunjo.org"
+          >
+            <Image
+              src="/mark.svg"
+              alt="gunjo logo"
+              width={40}
+              height={40}
+            />
+          </Link>
         </div>{" "}
         <Link
           href="/"
@@ -162,7 +166,7 @@ export default function Page() {
         </p>
       </section>
       <footer className="text-skin-tertiary mt-16 text-center text-sm font-medium">
-        &copy; {new Date().getFullYear()} Gunjo Foundation
+        &copy; {new Date().getFullYear()} <Link href="https://foundation.gunjo.org">Gunjo Foundation</Link>
       </footer>
     </main>
   );
