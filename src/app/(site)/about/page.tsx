@@ -64,7 +64,7 @@ export default function Page() {
         </p>
 
         <p className="text-skin-base mt-3">
-          The app is being developed by us,{" "}
+          And the app, Gunjo, is being developed by us,{" "}
           <Link
             href="https://foundation.gunjo.org"
             className="underline underline-offset-2"
@@ -153,8 +153,8 @@ export default function Page() {
           Can I support the project?
         </h3>
         <p className="text-skin-base mt-3">
-          As another way to contribute, if you like to support the project
-          and help keep the site up and running, please follow{" "}
+          If you like to support the project and help keep the site up and running,
+          please follow{" "}
           <Link
             href="https://gunjo.org/sponsorship"
             className="underline underline-offset-2"
