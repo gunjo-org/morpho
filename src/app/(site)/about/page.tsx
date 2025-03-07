@@ -32,7 +32,7 @@ export default function Page() {
         <p className="text-skin-base">
           Gunjo (formerly Morpho) is an open-source{" "}
           <Link
-            href="https://blueskyweb.xyz/"
+            href="https://bsky.social/about"
             className="underline underline-offset-2"
           >
             Bluesky
@@ -46,7 +46,7 @@ export default function Page() {
           </Link>
           . Similar to the official Bluesky app, it uses the{" "}
           <Link
-            href="https://blueskyweb.xyz/"
+            href="https://atproto.com/"
             className="underline underline-offset-2"
           >
             AT Protocol
