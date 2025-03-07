@@ -1,0 +1,12 @@
+User-agent: *
+
+Allow: /
+Disallow: /api/
+Disallow: /home/
+Disallow: /search/
+Disallow: /feeds/
+Disallow: /lists/
+Disallow: /notifications/
+Disallow: /settings/
+Disallow: /sponsorship/
+Disallow: /*?
