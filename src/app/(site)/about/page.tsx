@@ -7,12 +7,16 @@ export default function Page() {
     <main className="mx-auto mt-0 p-5 md:mt-16">
       <header className="mx-auto flex max-w-xl items-center justify-between animate-fade">
         <div className="flex items-center gap-3">
-          <Image
-            src="/mark.svg"
-            alt="gunjo logo"
-            width={40}
-            height={40}
-          />
+          <Link
+            href="https://foundation.gunjo.org"
+          >
+            <Image
+              src="/mark.svg"
+              alt="gunjo logo"
+              width={40}
+              height={40}
+            />
+          </Link>
         </div>{" "}
         <Link
           href="/"
@@ -26,9 +30,9 @@ export default function Page() {
           About
         </h1>
         <p className="text-skin-base">
-          Ouranos is an open-source{" "}
+          Gunjo (formerly Morpho) is an open-source{" "}
           <Link
-            href="https://blueskyweb.xyz/"
+            href="https://bsky.social/about"
             className="underline underline-offset-2"
           >
             Bluesky
@@ -42,26 +46,32 @@ export default function Page() {
           </Link>
           . Similar to the official Bluesky app, it uses the{" "}
           <Link
-            href="https://blueskyweb.xyz/"
+            href="https://atproto.com/"
             className="underline underline-offset-2"
           >
             AT Protocol
           </Link>
           , a decentralized networking technology for social media. This is
           similar to Twitter apps such as Twitterrific or Tweetbot that used
-          Twitter's API in the past.
+          Twitter's API in the past. Gunjo was forked from{" "}
+          <Link
+            href="https://github.com/pdelfan/ouranos"
+            className="underline underline-offset-2"
+          >
+            Ouranos
+          </Link>
+          , another Bluesky web client.
         </p>
 
         <p className="text-skin-base mt-3">
-          The app is being developed and designed by me,{" "}
+          And the app, Gunjo, is being developed by us,{" "}
           <Link
-            href="https://pouriade.com"
+            href="https://foundation.gunjo.org"
             className="underline underline-offset-2"
           >
-            Pouria
+            Gunjo Foundation
           </Link>
-          . I started the project to learn more about the AT Protocol and as fun
-          way to practice my skills.
+          .
         </p>
 
         <h2 className="text-skin-base mb-6 mt-12 text-2xl font-medium">
@@ -105,21 +115,8 @@ export default function Page() {
         </h3>
         <p className="text-skin-base">
           App passwords allow you to log in and use the app, but restrict
-          third-party clients (ex. Ouranos) from certain functionalities such as
+          third-party clients (ex. Gunjo) from certain functionalities such as
           account deletion or generating additional app passwords.
-        </p>
-        <h3 className="text-skin-base mb-1 mt-6 text-lg font-semibold">
-          Where can I see progress updates?
-        </h3>
-        <p className="text-skin-base">
-          You can see what is being worked on under{" "}
-          <Link
-            href="https://github.com/users/pdelfan/projects/1"
-            className="underline underline-offset-2"
-          >
-            projects
-          </Link>{" "}
-          on GitHub.{" "}
         </p>
 
         <h3 className="text-skin-base mb-1 mt-6 text-lg font-semibold">
@@ -128,7 +125,7 @@ export default function Page() {
         <p className="text-skin-base">
           If you have an account on GitHub, you can go to the project's{" "}
           <Link
-            href="https://github.com/pdelfan/ouranos"
+            href="https://github.com/gunjo-org/morpho"
             className="underline underline-offset-2"
           >
             repository
@@ -137,17 +134,17 @@ export default function Page() {
           question, etc). For general questions and anything that else that
           comes to your mind, there is{" "}
           <Link
-            href="https://github.com/pdelfan/ouranos/discussions"
+            href="https://github.com/gunjo-org/morpho/discussions"
             className="underline underline-offset-2"
           >
             Discussions
           </Link>
           . If you are not on GitHub, you can also{" "}
           <Link
-            href="https://bsky.app/profile/did:plc:3sapfnszmvjc6wa4ml3ybkwb"
+            href="https://bsky.app/profile/foundation.gunjo.org"
             className="underline underline-offset-2"
           >
-            mention me on Bluesky
+            mention us on Bluesky
           </Link>
           .
         </p>
@@ -156,13 +153,19 @@ export default function Page() {
           Can I support the project?
         </h3>
         <p className="text-skin-base mt-3">
-          If you like to support the project and help keep the site up and
-          running, stay tuned for more information! If you enjoy using Ouranos,
-          let me know! I'd love to hear from you.
+          If you like to support the project and help keep the site up and running,
+          please follow{" "}
+          <Link
+            href="https://gunjo.org/sponsorship"
+            className="underline underline-offset-2"
+          >
+            the navigation menu
+          </Link>{" "}
+          to become a sponsor.
         </p>
       </section>
       <footer className="text-skin-tertiary mt-16 text-center text-sm font-medium">
-        &copy; {new Date().getFullYear()} Gunjo Foundation
+        &copy; {new Date().getFullYear()} <Link href="https://foundation.gunjo.org">Gunjo Foundation</Link>
       </footer>
     </main>
   );
